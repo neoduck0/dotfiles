@@ -1,0 +1,35 @@
+return {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+        {
+            "folke/lazydev.nvim",
+            ft = "lua",
+            opts = {
+                library = {
+                    path = "${3rd}/luv/library",
+                    words = { "vim%.uv" }
+                }
+            }
+        },
+        {
+            "saghen/blink.cmp",
+            version = '1.*',
+            opts = {}
+        }
+    },
+    config = function()
+        vim.lsp.enable("lua_ls")
+        vim.lsp.enable("pyright")
+        vim.lsp.enable("bashls")
+        vim.lsp.enable("gopls")
+        vim.diagnostic.config({
+            underline = true,
+            virtual_text = {
+                current_line = true,
+                prefix = "●"
+            },
+            signs = false,
+            severity_sort = true
+        })
+    end
+}

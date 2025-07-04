@@ -1,0 +1,7 @@
+export XDG_DATA_HOME="$HOME/.local/share"
+
+export PATH="$HOME/.local/bin:$PATH"
+export WALLPAPER=$XDG_DATA_HOME/wall.png
+export GOPATH=~/.go
+
+export EDITOR=nvim

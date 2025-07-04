@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo "Backups"
+rclone sync -P $HOME/Documents/Backups crypt:Backups
+
+echo
+echo "Books"
+rclone sync -P $HOME/Documents/Books crypt:Books
+
+echo
+echo "Notes"
+rclone sync -P $HOME/Documents/Notes crypt:Notes
+
+echo
+echo "SSH"
+rclone sync -P $HOME/.ssh crypt:SSH --exclude known_hosts
+
+echo
+echo "Wallpapers"
+rclone sync -P $XDG_DATA_HOME/wallpapers crypt:Wallpapers

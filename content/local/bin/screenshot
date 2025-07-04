@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+grim -l 0 -g "$(slurp -d -b "#282828BF" -c "#ddc7a1" -F "JetBrainsMono Nerd Font" -w 2)" "$HOME/Pictures/$(date +%Y%m%d_%H%M%S).png"

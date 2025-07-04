@@ -1,0 +1,7 @@
+ZSH_THEME="afowler"
+plugins=(git sudo)
+
+alias todo="nvim ~/Documents/Notes/To-Do.md"
+
+source ~/.oh-my-zsh/oh-my-zsh.sh
+source <(fzf --zsh)

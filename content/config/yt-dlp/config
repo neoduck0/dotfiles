@@ -1,0 +1,3 @@
+--paths $HOME/Downloads
+--no-windows-filenames
+--output "%(title)s.%(ext)s"
