@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -n $1 ]]; then
+    sudo umount /dev/$1
+    sudo udisksctl power-off --block-device /dev/$1
+else
+    echo "usage: diskoff sda"
+fi

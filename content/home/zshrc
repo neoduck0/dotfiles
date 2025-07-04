@@ -1,0 +1,7 @@
+ZSH_THEME="afowler"
+plugins=(git sudo)
+
+alias modify-repos="sudo reflector --save /etc/pacman.d/mirrorlist --protocol https --latest 5 --sort age"
+alias cloud-sync="rclone -v sync ~/Cloud mega-crypt:"
+
+source ~/.oh-my-zsh/oh-my-zsh.sh
