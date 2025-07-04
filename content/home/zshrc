@@ -1,0 +1,35 @@
+# omz
+ZSH_THEME="afowler"
+ENABLE_CORRECTION="true"
+plugins=(git zsh-autosuggestions)
+source ~/.oh-my-zsh/oh-my-zsh.sh
+
+# aliases
+alias modify-repos="sudo reflector --save /etc/pacman.d/mirrorlist --protocol https --latest 5 --sort age"
+alias s-cloud="rclone -v sync ~/Cloud mega-crypt:"
+alias s-local="rclone -v sync mega-crypt: ~/Cloud"
+alias mmu-vpn="openconnect --server=vpn3.mmu.edu.my"
+
+# vi mode
+bindkey -v
+
+export KEYTIMEOUT=1
+
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
+
+# fzf
+source <(fzf --zsh)
+export FZF_DEFAULT_OPTS="--color=base16"

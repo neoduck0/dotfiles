@@ -1,0 +1,48 @@
+* {
+    font-family: JetBrainsMono Nerd Font Propo, sans-serif;
+    font-size: 12px;
+    color: #d4be98;
+}
+
+#waybar {
+    background-color: #282828;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 0px 20px;
+}
+
+#workspaces button:hover,
+#taskbar button:hover {
+    background: none;
+    transition: none;
+    box-shadow: none;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+}
+
+#power-profiles-daemon.performance {
+    color: #d3869b;
+}
+
+#battery.warning {
+    color: #e78a4e;
+}
+
+#battery.critical,
+#wireplumber.muted,
+#bluetooth,
+#network:not(.ethernet):not(.wifi) {
+    color: #ea6962;
+}
+
+#power-profiles-daemon.power-saver,
+#bluetooth.connected,
+#battery.charging,
+#battery.plugged {
+    color: #a9b665;
+}
