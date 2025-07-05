@@ -18,10 +18,11 @@ return {
         }
     },
     config = function()
+        vim.lsp.enable("bashls")
+        vim.lsp.enable("ccls")
+        vim.lsp.enable("gopls")
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("pyright")
-        vim.lsp.enable("bashls")
-        vim.lsp.enable("gopls")
         vim.diagnostic.config({
             underline = true,
             virtual_text = {
