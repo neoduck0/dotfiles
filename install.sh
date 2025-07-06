@@ -5,7 +5,7 @@ for base in gitconfig zprofile zshenv zshrc; do
 	ln -sf ~/Projects/dotfiles/content/$base ~/.$base
 done
 
-for config in fastfetch ghostty hypr mako nvim rofi waybar yt-dlp; do
+for config in alacritty fastfetch ghostty hypr mako nvim rofi waybar yt-dlp; do
 	rm -rf ~/.config/$config
 	ln -sf ~/Projects/dotfiles/content/config/$config ~/.config/$config
 done
