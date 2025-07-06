@@ -17,7 +17,6 @@ return {
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("pyright")
         vim.diagnostic.config({
-            underline = true,
             virtual_text = {
                 current_line = true,
                 prefix = "●"
