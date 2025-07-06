@@ -15,7 +15,3 @@ vim.keymap.set("n", "<leader>sh", vim.lsp.buf.signature_help)
 vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>rf", vim.lsp.buf.references)
-
-vim.keymap.set("n", "<leader>dg", function()
-	vim.diagnostic.enable(not vim.diagnostic.is_enabled())
-end)
