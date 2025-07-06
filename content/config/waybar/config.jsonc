@@ -96,7 +96,7 @@
 
         "tooltip": false,
 
-        "interval": 1
+        "interval": 5
     },
 
     "backlight": {
@@ -112,13 +112,13 @@
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""],
         
-        "tooltip": false,
+        "tooltip-format": "Health: {health}%",
         
         "states": {
             "warning": 30,
             "critical": 20
         },
-        "interval": 1
+        "interval": 60
     },
     
     "pulseaudio": {
@@ -140,11 +140,11 @@
 
     "network": {
         "format": "",
-        "format-wifi": "{signalStrength}% ",
+        "format-wifi": "",
         
-        "tooltip": false,
+        "tooltip-format": "SSID: {essid}\nStrength: {signalStrength}%",
         
-        "interval": 5
+        "interval": 10
     },
 
     "custom/power": {
