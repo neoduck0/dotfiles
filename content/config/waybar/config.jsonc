@@ -8,7 +8,7 @@
 
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock"],
-    "modules-right": ["tray", "hyprland/language", "privacy", "power-profiles-daemon", "idle_inhibitor", "memory", "cpu", "backlight", "battery", "pulseaudio", "bluetooth", "network", "custom/power"],
+    "modules-right": ["tray", "hyprland/language", "privacy", "power-profiles-daemon", "idle_inhibitor", "memory", "cpu", "backlight", "battery", "pulseaudio", "bluetooth", "network"],
 
     "hyprland/workspaces": {
         "format": "{name}: {icon} ",
@@ -53,11 +53,11 @@
         "modules": [
             {
                 "type": "screenshare",
-                "tooltip-icon-size": 12
+                "tooltip": false
             },
             {
                 "type": "audio-in",
-                "tooltip-icon-size": 12
+                "tooltip": false
             }
         ] 
     },
@@ -140,24 +140,10 @@
 
     "network": {
         "format": "",
-        "format-wifi": "",
-        
-        "tooltip-format": "SSID: {essid}\nStrength: {signalStrength}%",
-        
-        "interval": 10
-    },
-
-    "custom/power": {
-        "format" : "⏻",
+        "format-wifi": "{signalStrength}% ",
 
         "tooltip": false,
 
-        "menu": "on-click",
-        "menu-file": "~/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "suspend": "systemctl suspend",
-            "reboot": "reboot",
-            "shutdown": "shutdown now"
-        }
+        "interval": 10
     }
 }
