@@ -4,7 +4,7 @@
     "type": "none"
   },
   "display": {
-    "separator": "   ",
+    "separator": "  ",
     "color": {
       "separator": "1"
     },
@@ -16,7 +16,7 @@
   "modules": [
     "break",
     {
-      "key": "OS Age       ",
+      "key": "OS Age",
       "keyColor": "red",
       "type": "disk",
       "keyIcon": "",
@@ -24,49 +24,49 @@
       "folders": "/" 
     },
     {
-      "key": "Packages     ",
+      "key": "Packages",
       "keyColor": "green",
       "type": "packages"
     },
     {
-      "key": "BIOS         ",
+      "key": "BIOS",
       "keyColor": "yellow",
       "type": "bios",
       "format": "{version} {2}"
     },
     {
-      "key": "Kernel       ",
+      "key": "Kernel",
       "keyColor": "blue",
       "type": "kernel"
     },
     {
-      "key": "Init System  ",
+      "key": "Init System",
       "keyColor": "magenta",
       "type": "initsystem"
     },
     {
-      "key": "WM           ",
+      "key": "WM",
       "keyColor": "cyan",
       "type": "wm",
       "format": "{0} {version}"
     },
     {
-      "key": "Shell        ",
+      "key": "Shell",
       "keyColor": "red",
       "type": "shell"
     },
     {
-      "key": "Terminal     ",
+      "key": "Terminal",
       "keyColor": "green",
       "type": "terminal"
     },
     {
-      "key": "Editor       ",
+      "key": "Editor",
       "keyColor": "yellow",
       "type": "editor"
     },
     {
-      "key": "Version      ",
+      "key": "Version",
       "keyColor": "blue",
       "type": "version",
       "format": "{0} {version}"
