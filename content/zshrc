@@ -2,5 +2,6 @@ ZSH_THEME="afowler"
 plugins=(git sudo)
 
 alias todo="nvim ~/Documents/Notes/To-Do.md"
+alias dotfiles="cd ~/Projects/dotfiles"
 
 source ~/.oh-my-zsh/oh-my-zsh.sh
