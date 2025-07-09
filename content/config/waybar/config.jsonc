@@ -2,11 +2,11 @@
 {
     "layer": "bottom",
     "position": "top",
-    
+
     "height": 34,
     "spacing": 20,
 
-    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-left": ["hyprland/workspaces", "wlr/taskbar", "hyprland/submap"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "hyprland/language", "privacy", "power-profiles-daemon", "idle_inhibitor", "memory", "cpu", "backlight", "battery", "pulseaudio", "bluetooth", "network"],
 
@@ -20,36 +20,45 @@
 
         "all-outputs": true
     },
-    
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 12,
+
+        "tooltip": false,
+
+        "all-outputs": true
+    },
+
     "hyprland/submap": {
         "format": "{}",
-        
+
         "tooltip": false
     },
-    
+
     "clock": {
         "format": "{:%a %d/%m %H:%M:%S}",
-        
+
         "tooltip": false,
-        
+
         "interval": 1
     },
-    
+
     "tray": {
         "icon-size": 12,
         "spacing": 20
     },
-    
+
     "hyprland/language": {
         "format": "{}",
         "format-en": "en",
         "format-ar": "ar"
     },
-    
+
     "privacy": {
         "icon-size": 12,
         "icon-spacing": 20,
-        
+
         "modules": [
             {
                 "type": "screenshare",
@@ -61,7 +70,7 @@
             }
         ] 
     },
-    
+
     "power-profiles-daemon": {
         "format": "{icon}",
         "format-icons": {
@@ -69,17 +78,17 @@
             "balanced": "",
             "power-saver": ""
         },
-        
+
         "tooltip": false
     },
-    
+
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "",
             "deactivated": ""
         },
-        
+
         "tooltip": false
     },
 
@@ -102,7 +111,7 @@
     "backlight": {
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        
+
         "tooltip": false
     },
 
@@ -111,21 +120,21 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-icons": ["", "", "", "", ""],
-        
+
         "tooltip-format": "Health: {health}%",
-        
+
         "states": {
             "warning": 30,
             "critical": 20
         },
         "interval": 60
     },
-    
+
     "pulseaudio": {
         "format": "{volume}% {icon}",
         "format-muted": "",
         "format-icons": ["", "", ""],
-        
+
         "tooltip": false,
         "on-click": "pavucontrol"
     },
