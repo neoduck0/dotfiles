@@ -11,7 +11,7 @@
     "modules-right": ["tray", "hyprland/language", "privacy", "power-profiles-daemon", "idle_inhibitor", "memory", "cpu", "backlight", "battery", "pulseaudio", "bluetooth", "network"],
 
     "hyprland/workspaces": {
-        "format": "{name}: {icon} ",
+        "format": "{icon}",
         "format-icons": {
             "urgent": "",
             "active": "",
