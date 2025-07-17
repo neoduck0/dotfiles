@@ -11,7 +11,17 @@ return {
                 lualine_a = {'mode'},
                 lualine_b = {'branch', 'diff', 'diagnostics'},
                 lualine_c = {'filename'},
-                lualine_x = {'encoding', 'fileformat', 'filetype'},
+                lualine_x = {
+                    {
+                        require("noice").api.status.command.get,
+                        cond = require("noice").api.status.command.has,
+                    },
+                    {
+                        require("noice").api.status.search.get,
+                        cond = require("noice").api.status.search.has,
+                        color = { fg = "#0000ff" },
+                    }
+                },
                 lualine_y = {'progress'},
                 lualine_z = {'location'}
             },
@@ -19,7 +29,17 @@ return {
                 lualine_a = {'mode'},
                 lualine_b = {'branch', 'diff', 'diagnostics'},
                 lualine_c = {'filename'},
-                lualine_x = {'encoding', 'fileformat', 'filetype'},
+                lualine_x = {
+                    {
+                        require("noice").api.status.command.get,
+                        cond = require("noice").api.status.command.has,
+                    },
+                    {
+                        require("noice").api.status.search.get,
+                        cond = require("noice").api.status.search.has,
+                        color = { fg = "#0000ff" },
+                    }
+                },
                 lualine_y = {'progress'},
                 lualine_z = {'location'}
             },
