@@ -8,18 +8,19 @@ if [ ! -f $file ]; then
 fi
 
 if [ $(sudo cat $file) -eq 0 ]; then
-    echo "Battery conservation is currently disabled."
+    old_status=disabled
     new_mode=1
 else
-    echo "Battery conservation is currently enabled."
+    old_status=enabled
     new_mode=0
 fi
 
-echo "Toggling mode."
 echo $new_mode | sudo tee $file > /dev/null
 
 if [ $(sudo cat $file) -eq 0 ]; then
-    echo "Battery conservation is now disabled."
+    new_status=disabled
 else
-    echo "Battery conservation is now enabled."
+    new_status=enabled
 fi
+
+echo "$old_status -> $new_status"
