@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+file="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+
+if [ ! -f $file ]; then
+    echo "File does not exist."
+    exit 1
+fi
+
+if [ $(sudo cat $file) -eq 0 ]; then
+    echo "Battery conservation is currently disabled."
+    new_mode=1
+else
+    echo "Battery conservation is currently enabled."
+    new_mode=0
+fi
+
+echo "Toggling mode."
+echo $new_mode | sudo tee $file > /dev/null
+
+if [ $(sudo cat $file) -eq 0 ]; then
+    echo "Battery conservation is now disabled."
+else
+    echo "Battery conservation is now enabled."
+fi
