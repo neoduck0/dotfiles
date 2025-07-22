@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
 
-for base in gitconfig zprofile zshenv zshrc; do
-	rm -rf ~/.$base
-	ln -sf ~/Projects/dotfiles/content/$base ~/.$base
+content_path=$(cd $(dirname $0) && pwd)/content
+
+for f in gitconfig zprofile zshenv zshrc; do
+	rm -rf ~/.$f
+	ln -sf $content_path/home/$f ~/.$f
 done
 
-for config in fastfetch hypr kitty mako nvim rofi waybar yt-dlp; do
-	rm -rf ~/.config/$config
-	ln -sf ~/Projects/dotfiles/content/config/$config ~/.config/$config
+for f in $(ls $content_path/home/config); do
+	rm -rf $XDG_CONFIG_HOME/$f
+	ln -sf $content_path/home/config/$f $XDG_CONFIG_HOME/$f
 done
 
-rm -rf ~/.local/bin
-ln -sf ~/Projects/dotfiles/content/local/bin ~/.local/bin
+mkdir -p ~/.local/bin
+for f in $(ls $content_path/home/local/bin); do
+    rm -rf ~/.local/bin/$f 
+    ln -sf $content_path/home/local/bin/$f ~/.local/bin/$f 
+done 
+
+sudo rm -rf /etc/keyd/default.conf
+sudo ln -sf $content_path/etc/keyd/default.conf /etc/keyd/default.conf
