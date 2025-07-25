@@ -15,10 +15,10 @@ vim.keymap.set("n", "<leader>sD", function() Snacks.picker.diagnostics() end, { 
 
 vim.keymap.set("n", "<leader>t", function() Snacks.terminal() end, { silent = true })
 
-vim.keymap.set("n", "j", "jzz", { silent = true })
-vim.keymap.set("n", "k", "kzz", { silent = true })
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { silent = true })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { silent = true })
-vim.keymap.set("n", "n", "nzz", { silent = true })
-vim.keymap.set("n", "N", "Nzz", { silent = true })
-vim.keymap.set("n", "G", "Gzz", { silent = true })
+vim.keymap.set({"n", "v"}, "j", "jzz", { silent = true })
+vim.keymap.set({"n", "v"}, "k", "kzz", { silent = true })
+vim.keymap.set({"n", "v"}, "<C-d>", "<C-d>zz", { silent = true })
+vim.keymap.set({"n", "v"}, "<C-u>", "<C-u>zz", { silent = true })
+vim.keymap.set({"n", "v"}, "n", "nzz", { silent = true })
+vim.keymap.set({"n", "v"}, "N", "Nzz", { silent = true })
+vim.keymap.set({"n", "v"}, "G", "Gzz", { silent = true })
