@@ -5,7 +5,6 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
         explorer = { enabled = true },
-        indent = { enabled = true },
         notifier = { enabled = true },
         picker = {
             enabled = true,

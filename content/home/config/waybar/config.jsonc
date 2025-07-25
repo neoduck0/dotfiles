@@ -152,6 +152,7 @@
         "format-wifi": "{signalStrength}% ",
 
         "tooltip": false,
+        "on-click": "nm-connection-editor",
 
         "interval": 10
     }
