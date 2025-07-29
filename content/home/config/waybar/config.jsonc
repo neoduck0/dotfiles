@@ -149,9 +149,10 @@
 
     "network": {
         "format": "",
+        "format-ethernet": "",
         "format-wifi": "{signalStrength}% ",
 
-        "tooltip": false,
+        "tooltip-format": "{ifname}",
         "on-click": "nm-connection-editor",
 
         "interval": 10

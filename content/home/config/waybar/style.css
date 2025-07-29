@@ -36,7 +36,7 @@
 #battery.critical,
 #pulseaudio.muted,
 #bluetooth,
-#network:not(.wifi) {
+#network:not(.ethernet):not(.wifi) {
     color: #ea6962;
 }
 
