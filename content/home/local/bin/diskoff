@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+umount /dev/$1
+udisksctl power-off --block-device /dev/$1
