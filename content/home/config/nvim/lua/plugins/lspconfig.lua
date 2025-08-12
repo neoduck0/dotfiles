@@ -19,7 +19,6 @@ return {
         vim.diagnostic.config({
             virtual_text = {
                 current_line = true,
-                prefix = "●"
             },
             signs = false,
             severity_sort = true
