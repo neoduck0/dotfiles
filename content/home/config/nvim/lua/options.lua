@@ -10,5 +10,7 @@ vim.o.scrolloff = 10
 
 vim.o.clipboard = "unnamedplus"
 
+vim.o.mouse = ""
+
 vim.wo.number = true
 vim.wo.relativenumber = true

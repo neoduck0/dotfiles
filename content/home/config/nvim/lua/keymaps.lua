@@ -2,7 +2,9 @@ vim.keymap.set("n", "<leader>ww", "<C-w>w")
 vim.keymap.set("n", "<leader>wv", "<C-w>v")
 vim.keymap.set("n", "<leader>wq", "<C-w>q")
 
-vim.keymap.set("n", "<leader>e", function() Snacks.explorer() end)
+vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)
+
+vim.keymap.set("n", "<leader>ex", function() Snacks.explorer() end)
 
 vim.keymap.set("n", "<leader>ff", function() Snacks.picker.files() end)
 vim.keymap.set("n", "<leader>f/", function() Snacks.picker.grep() end)
