@@ -5,6 +5,8 @@ application/pdf=org.gnome.Papers.desktop
 video/mp4=vlc.desktop
 audio/mp4=io.bassi.Amberol.desktop
 inode/directory=org.gnome.Nautilus.desktop
+x-scheme-handler/http=librewolf.desktop
+x-scheme-handler/https=librewolf.desktop
 
 [Added Associations]
 image/png=librewolf.desktop;
@@ -13,3 +15,5 @@ application/x-partial-download=vlc.desktop;
 application/pdf=org.gnome.Papers.desktop;
 video/mp4=vlc.desktop;
 audio/mp4=io.bassi.Amberol.desktop;
+x-scheme-handler/http=librewolf.desktop;
+x-scheme-handler/https=librewolf.desktop;
