@@ -1,8 +1,6 @@
 vim.keymap.set("n", "<leader>ww", "<C-w>w")
-vim.keymap.set("n", "<leader>wv", "<C-w>v")
-vim.keymap.set("n", "<leader>wq", "<C-w>q")
 
-vim.keymap.set("n", "<leader>lu", ":Lazy update<CR>")
+vim.keymap.set("n", "<leader>lvu", ":Lazy update<CR>")
 
 vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)
 
