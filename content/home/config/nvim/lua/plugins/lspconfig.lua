@@ -11,6 +11,14 @@ return {
         }
     },
     config = function()
+        vim.lsp.config("pyright", {
+            settings = {
+                python = {
+                    pythonPath = ".venv/bin/python"
+                }
+            }
+        })
+
         vim.lsp.enable("bashls")
         vim.lsp.enable("clangd")
         vim.lsp.enable("cssls")
@@ -19,6 +27,7 @@ return {
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("pyright")
         vim.lsp.enable("ts_ls")
+
         vim.diagnostic.config({
             virtual_text = {
                 current_line = true,
