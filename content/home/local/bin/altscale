@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+file="$HOME/.config/hypr/hyprland.conf"
+
+auto_lines=(
+    "monitor=eDP-1,1920x1080@60,0x0,auto"
+    "monitor=HDMI-A-1,1920x1080@60,0x-1080,auto"
+)
+
+unscaled_lines=(
+    "monitor=eDP-1,1920x1080@60,0x0,1"
+    "monitor=HDMI-A-1,1920x1080@60,0x-1080,1"
+)
+
+check_auto() {
+    local match=0
+    for i in "${!auto_lines[@]}"; do
+        if ! grep -qFx "${auto_lines[i]}" "$file"; then
+            match=1
+            break
+        fi
+    done
+    return $match
+}
+
+check_unscaled() {
+    local match=0
+    for i in "${!unscaled_lines[@]}"; do
+        if ! grep -qFx "${unscaled_lines[i]}" "$file"; then
+            match=1
+            break
+        fi
+    done
+    return $match
+}
+
+if check_auto; then
+    for i in "${!auto_lines[@]}"; do
+        sed -i "s/^${auto_lines[i]}$/${unscaled_lines[i]}/" "$file"
+    done
+    echo "auto -> unscaled"
+elif check_unscaled; then
+    for i in "${!unscaled_lines[@]}"; do
+        sed -i "s/^${unscaled_lines[i]}$/${auto_lines[i]}/" "$file"
+    done
+    echo "unscaled -> auto"
+fi
