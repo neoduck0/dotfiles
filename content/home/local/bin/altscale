@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# WRITTEN BY AI
 
 file="$HOME/.config/hypr/hyprland.conf"
 
