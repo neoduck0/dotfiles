@@ -1,2 +1,6 @@
+-o "%(title)s.%(ext)s"
 --paths $HOME/Downloads/
 --no-windows-filenames
+--retries infinite
+--fragment-retries infinite
+--no-skip-unavailable-fragments
