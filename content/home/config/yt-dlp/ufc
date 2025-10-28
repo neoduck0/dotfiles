@@ -1,0 +1,3 @@
+-f "bestvideo[height<=720]+bestaudio"
+--windows-filenames
+--paths /run/media/a/hdd1000/UFC/
