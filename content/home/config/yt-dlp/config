@@ -4,3 +4,4 @@
 --retries infinite
 --fragment-retries infinite
 --no-skip-unavailable-fragments
+--concurrent-fragments 8
