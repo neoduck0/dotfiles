@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "languages": {
+    "Python": {
+      "ensure_final_newline_on_save": false,
+      "format_on_save": "off"
+    }
+  },
   "helix_mode": false,
   "disable_ai": true,
   "inlay_hints": {
