@@ -8,12 +8,8 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "relative_line_numbers": true,
-  "languages": {
-    "Python": {
-      "ensure_final_newline_on_save": false,
-      "format_on_save": "off"
-    }
-  },
+  "ensure_final_newline_on_save": false,
+  "format_on_save": "off",
   "helix_mode": false,
   "disable_ai": true,
   "inlay_hints": {
