@@ -14,3 +14,5 @@ vim.o.mouse = ""
 
 vim.wo.number = true
 vim.wo.relativenumber = true
+
+vim.o.wrap = false
