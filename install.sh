@@ -12,6 +12,11 @@ for f in $(ls $content_path/home/config); do
 	ln -sf $content_path/home/config/$f $XDG_CONFIG_HOME/$f
 done
 
+for f in icons themes; do
+	rm -rf ~/.$f
+    ln -sf $content_path/home/$f ~/.$f
+done
+
 mkdir -p ~/.local/bin
 for f in $(ls $content_path/home/local/bin); do
     rm -rf ~/.local/bin/$f 
