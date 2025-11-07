@@ -33,9 +33,11 @@ ln -sf $theme_dir/gtk-4.0/gtk.css $gtk4_dir/gtk.css
 ln -sf $theme_dir/gtk-4.0/gtk-dark.css $gtk4_dir/gtk-dark.css
 ln -sf $theme_dir/gtk-4.0/assets/ $gtk4_dir/assets
 
-flatpak override --user --filesystem=~/.themes
-flatpak override --user --filesystem=~/.icons
-flatpak override --user --filesystem=xdg-config/gtk-4.0
+if pacman -Q flatpak &> /dev/null; then
+    flatpak override --user --filesystem=~/.themes
+    flatpak override --user --filesystem=~/.icons
+    flatpak override --user --filesystem=xdg-config/gtk-4.0
 
-flatpak override --user --env GTK_THEME=$theme
-flatpak override --user --env ICON_THEME=$icon_theme
+    flatpak override --user --env GTK_THEME=$theme
+    flatpak override --user --env ICON_THEME=$icon_theme
+fi
