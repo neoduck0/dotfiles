@@ -4,8 +4,6 @@ vim.keymap.set("n", "<leader>lvu", ":Lazy update<CR>")
 
 vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)
 
-vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end)
-
 vim.keymap.set("n", "<leader>ex", function() Snacks.explorer() end)
 
 vim.keymap.set("n", "<leader>ff", function() Snacks.picker.files() end)
