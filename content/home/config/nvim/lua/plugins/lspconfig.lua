@@ -29,7 +29,9 @@ return {
         vim.lsp.enable("ts_ls")
 
         vim.diagnostic.config({
-            float = true,
+            virtual_text = {
+                current_line = true,
+            },
             signs = false,
             severity_sort = true
         })
