@@ -8,6 +8,7 @@ inode/directory=org.gnome.Nautilus.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 video/webm=vlc.desktop
+image/jpeg=org.gnome.Loupe.desktop
 
 [Added Associations]
 image/png=firefox.desktop;org.gnome.Loupe.desktop;
@@ -19,3 +20,4 @@ audio/mp4=io.bassi.Amberol.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 video/webm=vlc.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
