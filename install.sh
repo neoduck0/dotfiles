@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-content_path=$(cd $(dirname $0) && pwd)/content
+root_path=$(cd $(dirname $0) && pwd)
+content_path=$root_path/content
 
 for f in gitconfig zprofile zshenv zshrc; do
 	rm -rf ~/.$f
@@ -25,3 +26,5 @@ done
 
 sudo rm -rf /etc/keyd/default.conf
 sudo ln -sf $content_path/etc/keyd/default.conf /etc/keyd/default.conf
+
+./$root_path/apply-themes.sh
