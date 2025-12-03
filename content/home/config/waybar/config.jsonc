@@ -135,6 +135,8 @@
         "format-muted": "",
         "format-icons": ["", "", ""],
 
+        "max-volume": 150,
+
         "tooltip": false,
         "on-click": "pavucontrol"
     },
