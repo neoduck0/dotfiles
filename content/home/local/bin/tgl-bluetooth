@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+status=$(bluetoothctl show | grep Powered | cut -d ":" -f 2)
+
+if [[ $status == " yes"  ]]; then
+    bluetoothctl power off
+elif [[ $status == " no" ]]; then
+    bluetoothctl power yes 
+fi
