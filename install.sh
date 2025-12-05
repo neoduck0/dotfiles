@@ -27,4 +27,4 @@ done
 sudo rm -rf /etc/keyd/default.conf
 sudo ln -sf $content_path/etc/keyd/default.conf /etc/keyd/default.conf
 
-./$root_path/apply-themes.sh
+bash $root_path/apply-themes.sh
