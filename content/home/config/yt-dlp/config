@@ -7,3 +7,5 @@
 --fragment-retries 100
 --no-skip-unavailable-fragments
 --concurrent-fragments 4
+
+-f "bestvideo[height<=1080][ext=mp4]+bestaudio/best[ext=mp4]"
