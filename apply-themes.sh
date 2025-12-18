@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 theme=Gruvbox-Grey-Dark-Medium
 icon_theme=Gruvbox-Material-Dark
 font="JetBrainsMono Nerd Font Propo"
