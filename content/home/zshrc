@@ -5,7 +5,8 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 
 # aliases
 alias modify-repos="sudo reflector --save /etc/pacman.d/mirrorlist --protocol https --latest 5 --sort age"
-alias cloud-sync="rclone -v sync ~/Cloud mega-crypt:"
+alias s-cloud="rclone -v sync ~/Cloud mega-crypt:"
+alias s-local="rclone -v sync mega-crypt: ~/Cloud"
 alias mmu-vpn="openconnect --server=vpn3.mmu.edu.my"
 
 # vi mode
