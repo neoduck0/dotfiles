@@ -19,7 +19,9 @@ for f in $(ls $content_path/home/local/bin); do
     ln -sf $content_path/home/local/bin/$f ~/.local/bin/$f 
 done 
 
-sudo rm -rf /etc/keyd/default.conf
-sudo ln -sf $content_path/etc/keyd/default.conf /etc/keyd/default.conf
+for f in $(ls $content_path/etc); do
+    sudo rm -rf /etc/$f
+    sudo ln -sf $content_path/etc/$f /etc/$f
+done
 
 . $root_path/apply-themes.sh
