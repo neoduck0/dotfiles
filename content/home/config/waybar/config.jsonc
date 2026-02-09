@@ -16,9 +16,7 @@
             "urgent": "",
             "active": "",
             "default": ""
-        },
-
-        "all-outputs": true
+        }
     },
 
     "wlr/taskbar": {
