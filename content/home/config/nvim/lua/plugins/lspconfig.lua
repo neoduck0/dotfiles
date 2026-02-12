@@ -26,6 +26,7 @@ return {
         vim.lsp.enable("html")
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("pyright")
+        vim.lsp.enable("ruff")
         vim.lsp.enable("ts_ls")
 
         vim.diagnostic.config({
@@ -34,6 +35,13 @@ return {
             },
             signs = false,
             severity_sort = true
+        })
+
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            pattern = "*",
+            callback = function()
+                vim.lsp.buf.format({ async = false })
+            end,
         })
     end
 }
