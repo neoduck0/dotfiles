@@ -142,17 +142,19 @@
     "bluetooth": {
         "format": "",
         "format-connected": "{device_battery_percentage}% ",
-        "format-disabled": "",
-        "format-off": "",
-        "format-no-controller": ""
+        "format-no-controller": "",
+
+        "on-click": "rfkill toggle bluetooth"
     },
 
     "network": {
-        "format": "",
+        "format": "",
         "format-ethernet": "",
         "format-wifi": "{signalStrength}% ",
 
-        "tooltip-format": "{ifname}",
+        "tooltip-format": "{essid}",
+
+        "on-click": "rfkill toggle wifi",
 
         "interval": 10
     }

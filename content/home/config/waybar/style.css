@@ -35,8 +35,8 @@
 
 #battery.critical,
 #wireplumber.muted,
-#bluetooth,
-#network:not(.ethernet):not(.wifi) {
+#bluetooth.on,
+#network.disconnected {
     color: #ea6962;
 }
 
