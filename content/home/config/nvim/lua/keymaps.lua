@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>lu", ":Lazy update<CR>")
-
 vim.keymap.set("n", "<leader>ex", function() Snacks.explorer() end)
 
 vim.keymap.set("n", "<leader>wl", function()

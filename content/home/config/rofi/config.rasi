@@ -3,41 +3,46 @@
     highlight: bold italic;
     scrollbar: true;
 
-    /* Gruvbox dark colors */
-    gruvbox-dark-bg:           #282828;
-    gruvbox-dark-bg5:          #5a524c;
-    gruvbox-dark-fg:           #d4be98;
-    gruvbox-dark-red:          #ea6962;
-    gruvbox-dark-yellow:       #d8a657;
+    /* Tokyo Night Storm colors */
+    tokyonight-bg:           #1a1b26;
+    tokyonight-bg1:          #24283b;
+    tokyonight-bg2:          #292e42;
+    tokyonight-fg:           #a9b1d6;
+    tokyonight-red:          #f7768e;
+    tokyonight-green:        #9ece6a;
+    tokyonight-yellow:       #e0af68;
+    tokyonight-blue:         #7aa2f7;
+    tokyonight-magenta:      #bb9af7;
+    tokyonight-cyan:         #7dcfff;
 
     /* Theme colors */
-    background:                  @gruvbox-dark-bg;
+    background:                  @tokyonight-bg;
     background-color:            @background;
-    foreground:                  @gruvbox-dark-fg;
+    foreground:                  @tokyonight-fg;
     border-color:                @foreground;
     separatorcolor:              @border-color;
     scrollbar-handle:            @border-color;
 
     normal-background:           @background;
     normal-foreground:           @foreground;
-    alternate-normal-background: @gruvbox-dark-bg;
+    alternate-normal-background: @background;
     alternate-normal-foreground: @foreground;
-    selected-normal-background:  @gruvbox-dark-bg5;
-    selected-normal-foreground:  @gruvbox-dark-fg;
+    selected-normal-background:  @tokyonight-bg2;
+    selected-normal-foreground:  @tokyonight-blue;
 
-    active-background:           @gruvbox-dark-yellow;
-    active-foreground:           @background;
+    active-background:           @tokyonight-green;
+    active-foreground:           @tokyonight-bg;
     alternate-active-background: @active-background;
     alternate-active-foreground: @active-foreground;
-    selected-active-background:  @gruvbox-dark-yellow;
+    selected-active-background:  @tokyonight-green;
     selected-active-foreground:  @active-foreground;
 
-    urgent-background:           @gruvbox-dark-red;
-    urgent-foreground:           @background;
+    urgent-background:           @tokyonight-red;
+    urgent-foreground:           @tokyonight-bg;
     alternate-urgent-background: @urgent-background;
     alternate-urgent-foreground: @urgent-foreground;
-    selected-urgent-background:  @gruvbox-dark-red;
+    selected-urgent-background:  @tokyonight-red;
     selected-urgent-foreground:  @urgent-foreground;
 }
 
-@import "gruvbox-common"
+@import "tokyonight-common"

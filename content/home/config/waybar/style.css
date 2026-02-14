@@ -1,11 +1,11 @@
 * {
     font-family: JetBrainsMono Nerd Font Propo, sans-serif;
     font-size: 12px;
-    color: #d4be98;
+    color: #a9b1d6;
 }
 
 #waybar {
-    background-color: #282828;
+    background-color: #1a1b26;
 }
 
 .modules-left,
@@ -26,23 +26,23 @@
 }
 
 #power-profiles-daemon.performance {
-    color: #d3869b;
+    color: #bb9af7;
 }
 
 #battery.warning {
-    color: #e78a4e;
+    color: #e0af68;
 }
 
 #battery.critical,
 #wireplumber.muted,
 #bluetooth.on,
 #network.disconnected {
-    color: #ea6962;
+    color: #f7768e;
 }
 
 #power-profiles-daemon.power-saver,
 #bluetooth.connected,
 #battery.charging,
 #battery.plugged {
-    color: #a9b665;
+    color: #9ece6a;
 }

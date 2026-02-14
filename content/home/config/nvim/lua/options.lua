@@ -19,3 +19,5 @@ vim.o.wrap = false
 
 vim.o.spell = true
 vim.o.spelllang = "en_us"
+
+vim.cmd.colorscheme("tokyonight-night")
