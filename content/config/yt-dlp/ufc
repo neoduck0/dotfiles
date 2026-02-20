@@ -1,0 +1,4 @@
+-f "bestvideo[height<=1080]+bestaudio"
+--windows-filenames
+--paths ~/Videos/Entertainment/Events
+--netrc

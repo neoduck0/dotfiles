@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+
+import json
+import sys
+from urllib import request
+from datetime import datetime
+
+prayers = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"]
+
+
+def main():
+    now_date = datetime.now().strftime("%d-%m-%Y")
+
+    latitude = "2.1943"
+    longitude = "102.2488"
+
+    try:
+        url = f"https://api.aladhan.com/v1/timings/{now_date}?latitude={latitude}&longitude={longitude}"
+        with request.urlopen(url) as response:
+            data = json.loads(response.read().decode("utf-8"))["data"]
+            global timings
+            timings = data["timings"]
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return
+
+    if len(sys.argv) > 1 and sys.argv[1] == "waybar":
+        print(waybar())
+        return
+
+    print(all_prayers())
+
+
+def all_prayers() -> str:
+    return_str = ""
+    for prayer in prayers:
+        return_str += f"{prayer}: {timings[prayer]}\n"
+    return return_str.strip()
+
+
+def waybar() -> str:
+    now = datetime.now()
+    current_time = now.strftime("%H:%M")
+
+    prev_prayer = None
+    prev_time = None
+    next_prayer = None
+    next_time = None
+
+    for prayer in prayers:
+        prayer_time = timings[prayer][:5]
+        if prayer_time > current_time:
+            next_prayer = prayer
+            next_time = prayer_time
+            break
+        prev_prayer = prayer
+        prev_time = prayer_time
+
+    if prev_prayer is None:
+        return f"{prayers[0]} {timings[prayers[0]]}"
+
+    if next_prayer is None:
+        return f"{prev_prayer} {timings[prev_prayer]}"
+
+    def time_diff(t1, t2):
+        fmt = "%H:%M"
+        return abs((datetime.strptime(t2, fmt) - datetime.strptime(t1, fmt)).total_seconds())
+
+    prev_diff = time_diff(current_time, prev_time)
+    next_diff = time_diff(next_time, current_time)
+
+    if prev_diff <= next_diff:
+        return f"{prev_prayer} {timings[prev_prayer]}"
+    return f"{next_prayer} {timings[next_prayer]}"
+
+
+if __name__ == "__main__":
+    main()
