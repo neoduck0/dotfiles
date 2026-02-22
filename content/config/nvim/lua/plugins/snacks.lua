@@ -9,7 +9,12 @@ return {
             enabled = true,
             layout = {
                 layout = { backdrop = false }
-            }
+            },
+            sources = {
+                files = { hidden = true },
+                grep = { hidden = true },
+                explorer = { hidden = true }
+            },
         },
         scroll = { enabled = true }
     }
