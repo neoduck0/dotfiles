@@ -65,7 +65,9 @@ def waybar() -> str:
 
     def time_diff(t1, t2):
         fmt = "%H:%M"
-        return abs((datetime.strptime(t2, fmt) - datetime.strptime(t1, fmt)).total_seconds())
+        return abs(
+            (datetime.strptime(t2, fmt) - datetime.strptime(t1, fmt)).total_seconds()
+        )
 
     prev_diff = time_diff(current_time, prev_time)
     next_diff = time_diff(next_time, current_time)
