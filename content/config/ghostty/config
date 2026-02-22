@@ -2,3 +2,5 @@ theme = TokyoNight Night
 font-size = 18
 keybind = ctrl+enter=unbind
 keybind = ctrl+shift+t=unbind
+
+window-padding-x = 12
