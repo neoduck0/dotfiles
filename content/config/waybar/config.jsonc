@@ -6,6 +6,7 @@
     "spacing": 20,
     "modules-left": [
         "hyprland/workspaces",
+        "custom/pdirty",
         "wlr/taskbar",
         "hyprland/submap"
     ],
@@ -34,6 +35,12 @@
             "active": "",
             "default": ""
         }
+    },
+    "custom/pdirty": {
+        "exec": "pdirty waybar",
+        "interval": 60,
+        "return-type": "json",
+        "format": "{text}"
     },
     "wlr/taskbar": {
         "format": "{icon}",

@@ -36,7 +36,8 @@
 #battery.critical,
 #wireplumber.muted,
 #bluetooth.on,
-#network.disconnected {
+#network.disconnected,
+#custom-pdirty.dirty {
     color: #f7768e;
 }
 
