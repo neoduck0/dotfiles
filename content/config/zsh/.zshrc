@@ -47,6 +47,9 @@ export PATH=$HOME/.opencode/bin:$PATH
 # fzf
 source <(fzf --zsh)
 export FZF_DEFAULT_OPTS="--color=base16"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --exclude .cache"
+export FZF_CTRL_T_COMMAND="fd --type f --hidden --exclude .cache"
+export FZF_ALT_C_COMMAND="fd --type d --hidden --exclude .cache"
 
 # tmux
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
