@@ -37,7 +37,8 @@
 #wireplumber.muted,
 #bluetooth.on,
 #network.disconnected,
-#custom-pdirty.dirty {
+#custom-pdirty.dirty,
+#custom-pupdates.many {
     color: #f7768e;
 }
 
