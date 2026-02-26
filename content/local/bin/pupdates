@@ -95,10 +95,12 @@ def waybar():
     total = sum(v for v in [_repo, _aur, _flatpak] if v > 0)
 
     if total == 0:
-        return json.dumps({
-            "text": f"{icon}",
-            "tooltip": f"Repo: {fmt(_repo)}\nAur: {fmt(_aur)}\nFlatpak: {fmt(_flatpak)}"
-        })
+        return json.dumps(
+            {
+                "text": f"{icon}",
+                "tooltip": f"Repo: {fmt(_repo)}\nAur: {fmt(_aur)}\nFlatpak: {fmt(_flatpak)}",
+            }
+        )
 
     output = {
         "text": f"{icon} {total}",
