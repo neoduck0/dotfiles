@@ -4,6 +4,23 @@
 import subprocess
 import sys
 import json
+from pathlib import Path
+
+
+def get_unlogged_packages():
+    pkgs_path = Path.home() / "Projects" / "archer" / "pkgs.py"
+    if not pkgs_path.exists():
+        return False
+    try:
+        result = subprocess.run(
+            ["python", str(pkgs_path), "diff"],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        return bool(result.stdout.strip())
+    except Exception:
+        return False
 
 _repo = None
 _aur = None
@@ -93,21 +110,14 @@ def waybar():
         return "Error" if val < 0 else val
 
     total = sum(v for v in [_repo, _aur, _flatpak] if v > 0)
-
-    if total == 0:
-        return json.dumps(
-            {
-                "text": f"{icon}",
-                "tooltip": f"Repo: {fmt(_repo)}\nAur: {fmt(_aur)}\nFlatpak: {fmt(_flatpak)}",
-            }
-        )
+    has_unlogged = get_unlogged_packages()
 
     output = {
-        "text": f"{icon} {total}",
+        "text": f"{icon}" if total == 0 else f"{icon} {total}",
         "tooltip": f"Repo: {fmt(_repo)}\nAur: {fmt(_aur)}\nFlatpak: {fmt(_flatpak)}",
     }
-    if total > 50:
-        output["class"] = "many"
+    if has_unlogged:
+        output["class"] = "unlogged"
 
     return json.dumps(output)
 

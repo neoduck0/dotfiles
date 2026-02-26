@@ -7,7 +7,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/pdirty",
-        "custom/pupdates",
+        "custom/pcheck",
         "wlr/taskbar",
         "hyprland/submap"
     ],
@@ -43,8 +43,8 @@
         "return-type": "json",
         "format": "{text}"
     },
-    "custom/pupdates": {
-        "exec": "pupdates waybar",
+    "custom/pcheck": {
+        "exec": "pcheck waybar",
         "interval": 60,
         "return-type": "json",
         "format": "{text}"
