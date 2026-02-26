@@ -15,6 +15,10 @@ def main():
     latitude = "2.1943"
     longitude = "102.2488"
 
+    for_waybar = False
+    if len(sys.argv) > 1 and sys.argv[1] == "waybar":
+        for_waybar = True
+
     try:
         url = f"https://api.aladhan.com/v1/timings/{now_date}?latitude={latitude}&longitude={longitude}&method=1&fajr=20&isha=18"
         with request.urlopen(url) as response:
@@ -23,10 +27,11 @@ def main():
             timings = data["timings"]
 
     except Exception as e:
-        print(f"Error: {e}")
+        if not for_waybar:
+            print(f"Error: {e}")
         return
 
-    if len(sys.argv) > 1 and sys.argv[1] == "waybar":
+    if for_waybar:
         print(waybar())
         return
 
