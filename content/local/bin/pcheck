@@ -10,7 +10,7 @@ from pathlib import Path
 def get_unlogged_packages():
     pkgs_path = Path.home() / "Projects" / "archer" / "pkgs.py"
     if not pkgs_path.exists():
-        return False
+        return None
     try:
         result = subprocess.run(
             ["python", str(pkgs_path), "diff"],
@@ -18,9 +18,9 @@ def get_unlogged_packages():
             text=True,
             timeout=30,
         )
-        return bool(result.stdout.strip())
+        return result.stdout.strip() if result.stdout.strip() else None
     except Exception:
-        return False
+        return None
 
 _repo = None
 _aur = None
@@ -110,13 +110,22 @@ def waybar():
         return "Error" if val < 0 else val
 
     total = sum(v for v in [_repo, _aur, _flatpak] if v > 0)
-    has_unlogged = get_unlogged_packages()
+    unlogged = get_unlogged_packages()
+
+    tooltip_parts = [
+        "Updates",
+        f"Repo: {fmt(_repo)}",
+        f"Aur: {fmt(_aur)}",
+        f"Flatpak: {fmt(_flatpak)}",
+    ]
+    if unlogged:
+        tooltip_parts.extend(["", "Unlogged", unlogged])
 
     output = {
         "text": f"{icon}" if total == 0 else f"{icon} {total}",
-        "tooltip": f"Repo: {fmt(_repo)}\nAur: {fmt(_aur)}\nFlatpak: {fmt(_flatpak)}",
+        "tooltip": "\n".join(tooltip_parts),
     }
-    if has_unlogged:
+    if unlogged:
         output["class"] = "unlogged"
 
     return json.dumps(output)
