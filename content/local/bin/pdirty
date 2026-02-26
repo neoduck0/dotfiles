@@ -44,7 +44,7 @@ def waybar():
     return json.dumps(
         {
             "text": " " + str(count),
-            "tooltip": "\\n".join(repos),
+            "tooltip": "\n".join(repos),
             "class": "dirty",
         }
     )
