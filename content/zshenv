@@ -3,3 +3,4 @@ export GOPATH=~/.local/share/.go
 export PATH=~/.local/bin:"$PATH"
 export ZDOTDIR=~/.config/zsh
 export TODO_FILE=~/Cloud/Notes/todo.md
+export PYTHON_HISTORY=/dev/null
