@@ -37,15 +37,5 @@ return {
             signs = false,
             severity_sort = true
         })
-
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            pattern = "*",
-            callback = function()
-                local save_cursor = vim.fn.getpos(".")
-                vim.cmd([[%s/\s\+$//e]])
-                vim.lsp.buf.format({ async = false })
-                vim.fn.setpos(".", save_cursor)
-            end,
-        })
     end
 }
