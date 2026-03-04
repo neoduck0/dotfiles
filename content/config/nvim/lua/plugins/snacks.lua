@@ -16,6 +16,7 @@ return {
                 explorer = { hidden = true }
             },
         },
-        scroll = { enabled = true }
+        scroll = { enabled = true },
+        notifier = { enabled = true }
     }
 }
