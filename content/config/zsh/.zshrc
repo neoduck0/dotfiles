@@ -5,8 +5,9 @@ source ~/.oh-my-zsh/oh-my-zsh.sh
 
 # aliases
 alias modify-repos="sudo reflector --save /etc/pacman.d/mirrorlist --protocol https --latest 5 --sort age"
-alias s-cloud="rclone -v sync ~/Cloud mega-crypt:"
-alias s-local="rclone -v sync mega-crypt: ~/Cloud"
+alias rcs-cloud="rclone -v sync ~/Cloud mega-crypt:"
+alias rcs-local="rclone -v sync mega-crypt: ~/Cloud"
+alias rc-check="rclone -v check mega-crypt: ~/Cloud"
 alias todo="$EDITOR $TODO_FILE"
 
 # vi mode
