@@ -16,10 +16,5 @@ vim.keymap.set("n", "<leader>ft", function() Snacks.picker.todo_comments() end)
 vim.keymap.set("n", "<leader>fg", function() Snacks.picker.git_status() end)
 
 
-vim.keymap.set("n", "j", "gjzz")
-vim.keymap.set("n", "k", "gkzz")
-
-vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
-
 vim.keymap.set('n', '[c', function() require("gitsigns").nav_hunk('prev') end)
 vim.keymap.set('n', ']c', function() require("gitsigns").nav_hunk('next') end)
