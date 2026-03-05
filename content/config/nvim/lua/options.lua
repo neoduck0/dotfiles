@@ -23,14 +23,3 @@ vim.o.spelllang = "en_us"
 vim.o.smoothscroll = true
 
 vim.cmd.colorscheme("tokyonight-night")
-
--- format file on write
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*",
-    callback = function()
-        local save_cursor = vim.fn.getpos(".")
-        vim.cmd([[%s/\s\+$//e]])
-        vim.lsp.buf.format({ async = false })
-        vim.fn.setpos(".", save_cursor)
-    end,
-})
