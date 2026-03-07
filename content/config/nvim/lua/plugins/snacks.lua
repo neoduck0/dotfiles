@@ -4,6 +4,7 @@ return {
     lazy = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
+        dashboard = { enabled = true },
         explorer = { enabled = true },
         picker = {
             enabled = true,
