@@ -4,6 +4,10 @@ vim.keymap.set("n", "<leader>w", function()
     vim.opt.wrap = not vim.opt.wrap:get()
     vim.opt.linebreak = vim.opt.wrap:get()
 end)
+vim.keymap.set('n', '<leader>td', function()
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled())
+end)
+
 
 vim.keymap.set("n", "<leader>f/", function() Snacks.picker.grep() end)
 vim.keymap.set("n", "<leader>fD", function() Snacks.picker.diagnostics() end)
