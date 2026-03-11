@@ -7,6 +7,9 @@ end)
 vim.keymap.set('n', '<leader>td', function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end)
+vim.keymap.set('n', '<leader>ts', function()
+    vim.opt.spell = not vim.opt.spell:get()
+end)
 
 
 vim.keymap.set("n", "<leader>f/", function() Snacks.picker.grep() end)
