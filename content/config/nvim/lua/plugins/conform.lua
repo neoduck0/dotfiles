@@ -7,7 +7,7 @@ return {
 				c = { "clang-format" },
 				go = { "gofmt" },
 				json = { "jq" },
-				lua = { "stylua" },
+				lua = { lsp_format = "first" },
 				python = { "ruff" },
 				sh = { "shfmt" },
 			},
