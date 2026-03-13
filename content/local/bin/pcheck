@@ -121,7 +121,7 @@ def waybar():
         tooltip_parts.extend(["", "Unlogged", unlogged])
 
     output = {
-        "text": f"{icon}" if total == 0 else f"{icon} {total}",
+        "text": f"{icon} {total}",
         "tooltip": "\n".join(tooltip_parts),
     }
     if unlogged:
