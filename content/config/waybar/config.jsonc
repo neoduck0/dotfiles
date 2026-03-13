@@ -8,6 +8,7 @@
         "hyprland/workspaces",
         "custom/pdirty",
         "custom/pcheck",
+        "custom/todos",
         "wlr/taskbar",
         "hyprland/submap"
     ],
@@ -44,6 +45,12 @@
     },
     "custom/pcheck": {
         "exec": "pcheck waybar",
+        "interval": 60,
+        "return-type": "json",
+        "format": "{text}"
+    },
+    "custom/todos": {
+        "exec": "todoscount",
         "interval": 60,
         "return-type": "json",
         "format": "{text}"
