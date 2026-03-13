@@ -1,5 +1,4 @@
 #!/bin/python
-# VIBE CODED
 
 import os
 import subprocess
