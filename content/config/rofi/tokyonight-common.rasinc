@@ -3,7 +3,7 @@ window {
     border:           2;
     padding:          2;
     width:            500;
-    font:             "JetBrainsMono Nerd Font Mono 15";
+    font:             "JetBrainsMono Nerd Font Mono 12";
 }
 
 mainbox {
