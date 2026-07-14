@@ -1,0 +1,83 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+    "display": {
+        "key": {
+            "width": 10
+        },
+        "size": {
+            "binaryPrefix": "jedec"
+        },
+        "separator": ""
+    },
+    "logo": {
+        "type": "data-raw",
+        "source": "            ####*\n          #########\n         ###########\n         #  ##   ###\n         ##*\u001b[33m--\u001b[0m=# ###\n         +\u001b[33m------\u001b[0m*###\n         # \u001b[33m----\u001b[0m. ####\n        #         ####\n      ###          #####\n     ###            #####\n    # #              #####\n   ###               # ####"
+    },
+    "modules": [
+         {
+            "type": "disk",
+            "key": "age",
+            "keyColor": "white",
+            "format": "{days} days",
+            "folders": "/"
+         },
+        {
+            "type": "os",
+            "key": "os",
+            "keyColor": "red"
+        },
+        {
+            "type": "kernel",
+            "key": "ker",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "pkgs",
+            "keyColor": "green"
+        },
+        {
+            "type": "shell",
+            "key": "sh",
+            "keyColor": "cyan",
+            "format": "{pretty-name}"
+        },
+        {
+            "type": "wm",
+            "key": "wm",
+            "keyColor": "blue",
+            "format": "{pretty-name}"
+        },
+        {
+            "type": "uptime",
+            "key": "up",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "cpu",
+            "key": "cpu",
+            "keyColor": "white",
+            "format": "{name}"
+        },
+        {
+            "type": "memory",
+            "key": "ram",
+            "keyColor": "red",
+            "format": "{used} / {total}"
+        },
+        {
+            "type": "disk",
+            "key": "disk",
+            "keyColor": "yellow",
+            "folders": [
+                "/"
+            ],
+            "format": "{size-used} / {size-total}"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[33m󰮯 \u001b[31m󰊠 \u001b[32m󰊠 \u001b[34m󰊠 \u001b[35m󰊠 \u001b[36m󰊠 \u001b[37m󰊠"
+        }
+    ]
+}

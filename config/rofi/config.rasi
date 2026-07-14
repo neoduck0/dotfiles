@@ -1,0 +1,141 @@
+* {
+    highlight: bold italic;
+    scrollbar: true;
+
+    bg:      #161616;
+    bg-sel:  #2a2a2a;
+    border:  #535353;
+    fg:      #f2f4f8;
+    red:     #ee5396;
+    green:   #25be6a;
+    yellow:  #08bdba;
+    orange:  #3ddbd9;
+    blue:    #78a9ff;
+    magenta: #be95ff;
+    cyan:    #33b1ff;
+}
+
+window {
+    background-color: @bg;
+    border-color:     @border;
+    border:           2;
+    border-radius:    10px;
+    padding:          6;
+    width:            500;
+    font:             "JetBrainsMono Nerd Font Mono 12";
+}
+
+mainbox {
+    border:  0;
+    padding: 0;
+}
+
+message {
+    border:       2px 0 0;
+    border-color: @border;
+    padding:      1px;
+}
+
+textbox {
+    highlight:  @highlight;
+    text-color: @fg;
+}
+
+listview {
+    border:       2px solid 0 0;
+    padding:      2px 0 0;
+    border-color: @border;
+    spacing:      2px;
+}
+
+scrollbar {
+    handle-color: @border;
+}
+
+element {
+    border:  0;
+    padding: 2px;
+}
+
+element.normal.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+element.normal.urgent {
+    background-color: @red;
+    text-color:       @bg;
+}
+
+element.normal.active {
+    background-color: @green;
+    text-color:       @bg;
+}
+
+element.selected.normal {
+    background-color: @bg-sel;
+    text-color:       @orange;
+}
+
+element.selected.urgent {
+    background-color: @red;
+    text-color:       @bg;
+}
+
+element.selected.active {
+    background-color: @green;
+    text-color:       @bg;
+}
+
+element.alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+element.alternate.urgent {
+    background-color: @red;
+    text-color:       @bg;
+}
+
+element.alternate.active {
+    background-color: @green;
+    text-color:       @bg;
+}
+
+mode-switcher {
+    border:       2px 0 0;
+    border-color: @border;
+}
+
+inputbar {
+    spacing:    0;
+    text-color: @fg;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator, entry, prompt, button {
+    spacing:    0;
+    text-color: @fg;
+}
+
+entry {
+    placeholder: "";
+}
+
+button.selected {
+    background-color: @bg-sel;
+    text-color:       @orange;
+}
+
+textbox-prompt-sep {
+    expand:     false;
+    str:        ":";
+    text-color: @fg;
+    margin:     0 0.3em 0 0;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}

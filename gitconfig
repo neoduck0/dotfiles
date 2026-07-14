@@ -1,0 +1,25 @@
+[init]
+	defaultBranch = main
+
+[user]
+	name = neoduck0
+	email = 219318428+neoduck0@users.noreply.github.com
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[diff]
+    algorithm = histogram
+    colorMoved = default
+
+[delta]
+    file-decoration-style = none
+    hunk-header-decoration-style = none
+    syntax-theme = ansi
+    line-numbers = true
+
+[merge]
+    conflictstyle = zdiff3

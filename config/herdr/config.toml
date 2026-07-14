@@ -1,0 +1,43 @@
+onboarding = false
+
+[theme.custom]
+panel_bg = "#1a1a1a"
+accent = "#08bdba"
+surface0 = "#161616"
+surface1 = "#1a1a1a"
+surface_dim = "#0d0d0d"
+overlay0 = "#5a5a5a"
+overlay1 = "#686868"
+subtext0 = "#e5ebf8"
+mauve = "#be95ff"
+green = "#25be6a"
+teal = "#33b1ff"
+blue = "#78a9ff"
+red = "#ee5396"
+yellow = "#f1c21b"
+peach = "#3ddbd9"
+
+[keys]
+prefix = "ctrl+`"
+new_tab = ["alt+n"]
+
+switch_tab = ["alt+1..9"]
+
+focus_pane_left = ["alt+h"]
+focus_pane_down = ["alt+j"]
+focus_pane_up = ["alt+k"]
+focus_pane_right = ["alt+l"]
+
+split_vertical = ["alt+v"]
+split_horizontal = ["alt+s"]
+
+[ui.toast]
+delivery = "system"
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = false

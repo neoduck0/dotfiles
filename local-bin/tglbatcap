@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ $EUID -ne 0 ]; then
+    pkexec "$0" "$@"
+    exit $?
+fi
+
+file="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode"
+
+if [ ! -f $file ]; then
+    echo "File does not exist."
+    exit 1
+fi
+
+if [ $(cat $file) -eq 0 ]; then
+    new_mode=1
+else
+    new_mode=0
+fi
+
+echo $new_mode | tee $file >/dev/null
+
+if [ $(cat $file) -eq 0 ]; then
+    message=Disabled
+else
+    message=Enabled
+fi
+
+REAL_USER=${PKEXEC_UID:-$USER}
+USER_ID=$(id -u "$REAL_USER")
+su "$REAL_USER" -c "DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$USER_ID/bus notify-send 'Battery Cap' '$message'"

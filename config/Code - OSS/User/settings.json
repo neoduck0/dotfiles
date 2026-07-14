@@ -1,0 +1,14 @@
+{
+    "telemetry.feedback.enabled": false,
+    "telemetry.editStats.enabled": false,
+    "window.controlsStyle": "hidden",
+    "telemetry.telemetryLevel": "off",
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "none",
+    "editor.lineNumbers": "relative",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Carbonfox",
+    "chat.agent.enabled": false,
+    "vim.useSystemClipboard": true
+}

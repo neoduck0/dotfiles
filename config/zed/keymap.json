@@ -1,0 +1,97 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    // Native neovim bindings
+    {
+        "bindings": {
+            "ctrl-y": "editor::ConfirmCompletion",
+            "ctrl-l": "buffer_search::Dismiss",
+        },
+    },
+
+    // Custom neovim bindings
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space f f": "file_finder::Toggle",
+            "space f /": "text_finder::Toggle",
+            "space e": "workspace::ToggleLeftDock",
+        },
+    },
+
+    {
+        "context": "ProjectPanel && not_editing",
+        "bindings": {
+            "space e": "workspace::ToggleLeftDock",
+        },
+    },
+
+    // Zed specific bind
+    {
+        "context": "Pane",
+        "bindings": {
+            "ctrl-q": "pane::CloseActiveItem",
+        },
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space t": "terminal_panel::Toggle",
+        },
+    },
+
+    // Disable annoying keybinds
+    {
+        "context": "Pane",
+        "unbind": {
+            "ctrl-w": [
+                "pane::CloseActiveItem",
+                {
+                    "close_pinned": false,
+                },
+            ],
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-l": "editor::SelectLine",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-n": "workspace::NewFile",
+        },
+    },
+    {
+        "unbind": {
+            "ctrl-q": "zed::Quit",
+        },
+    },
+
+    // Unused neovim keymaps
+    {
+        "context": "VimControl && !menu",
+        "unbind": {
+            "ctrl-q": "vim::ToggleVisualBlock",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-t": "project_symbols::Toggle",
+        },
+    },
+    {
+        "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
+        "unbind": {
+            "tab": "editor::AcceptEditPrediction",
+        },
+    },
+]
