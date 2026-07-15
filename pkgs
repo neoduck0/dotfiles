@@ -143,6 +143,7 @@ BASIC = [
     "shfmt",
     "sudo",
     "tailscale",
+    "taskwarrior-tui",
     "tmux",
     "tree",
     "tree-sitter-cli",
@@ -153,6 +154,7 @@ BASIC = [
     "unzip",
     "usbutils",
     "uv",
+    "valgrind",
     "vscode-css-languageserver",
     "vscode-html-languageserver",
     "vscode-json-languageserver",
@@ -170,6 +172,7 @@ DESKTOP = [
     "adw-gtk-theme",
     "amberol",
     "android-tools",
+
     "audacity",
     "bluez",
     "bluez-utils",
