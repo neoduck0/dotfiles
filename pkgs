@@ -3,6 +3,7 @@
 import os
 import sys
 import difflib
+import shutil
 import subprocess
 
 PROFILE = "hyprland"
@@ -29,18 +30,18 @@ def main():
 def diff():
     selected = PROFILES[PROFILE] + AUR
     selected.sort()
-    selected += FLATPAKS
 
-    installed = (
-        subprocess.run(
-            ["pacman", "-Qeq"], capture_output=True, text=True
-        ).stdout.split()
-        + subprocess.run(
+    installed = subprocess.run(
+        ["pacman", "-Qeq"], capture_output=True, text=True
+    ).stdout.split()
+
+    if shutil.which("flatpak"):
+        selected += FLATPAKS
+        installed += subprocess.run(
             ["flatpak", "list", "--app", "--columns=application"],
             capture_output=True,
             text=True,
         ).stdout.split()
-    )
 
     diff = list(difflib.ndiff(selected, installed))
     for line in diff:
