@@ -20,7 +20,7 @@ hl.monitor({
 ---- MY PROGRAMS ----
 ---------------------
 
-local terminal = "kitty"
+local terminal = "foot"
 local fileManager = "nautilus --new-window"
 local menu = "rofi -show-icons -show drun"
 local browser = "firefox"
