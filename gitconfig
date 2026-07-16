@@ -18,8 +18,8 @@
 [delta]
     file-decoration-style = none
     hunk-header-decoration-style = none
-    syntax-theme = ansi
     line-numbers = true
+    side-by-side = true
 
 [merge]
     conflictstyle = zdiff3

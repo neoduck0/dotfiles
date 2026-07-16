@@ -1,64 +1,51 @@
 * {
-  font-family:
-    JetBrainsMono Nerd Font Propo,
-    sans-serif;
-  font-size: 12px;
-  color: #f2f4f8;
+  font-family: JetBrainsMono Nerd Font Propo, sans-serif;
 }
 
 #waybar {
-  background-color: #161616;
-  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 12px;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  padding: 0px 20px;
+  margin: 0px 20px;
 }
 
-#workspaces button {
+button {
   background: none;
-  border-radius: 0;
-  border: 0;
-  box-shadow: none;
+  border: none;
   padding: 0px 5px;
   transition: none;
 }
 
-#workspaces button:hover,
-#taskbar button:hover {
-  background: none;
-  box-shadow: none;
-  border: none;
+#workspaces button label {
+  color: #888888;
 }
 
-#workspaces button.urgent {
-  box-shadow: inset 0px -3px 0px 0px #ee5396;
-}
-
-#workspaces button.active {
-  background: #282828;
+#workspaces button.active label {
+  color: #ffffff;
 }
 
 #power-profiles-daemon.performance {
-  color: #ee5396;
+  color: #ff00ff;
 }
 
-#custom-power:hover,
+#workspaces button.urgent label
 #battery.warning,
 #battery.critical,
 #wireplumber.muted,
 #bluetooth.on,
 #network.disconnected,
-#custom-drepos.dirty,
-#custom-pcheck.unlogged {
-  color: #ee5396;
+#custom-drepos.dirty {
+  color: #ff0000;
 }
 
 #power-profiles-daemon.power-saver,
 #bluetooth.connected,
 #battery.charging,
 #battery.plugged {
-  color: #25be6a;
+  color: #00ff00;
 }

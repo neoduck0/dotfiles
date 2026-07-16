@@ -1,11 +1,10 @@
-anchor=top-center
+anchor=top-right
 
 border-size=2
-border-color=#535353
-border-radius=10
+border-color=#333333
 
-background-color=#161616
-text-color=#f2f4f8
-progress-color=#78a9ff
+background-color=#000000
+text-color=#ffffff
+progress-color=#0000ff
 
 default-timeout=10000

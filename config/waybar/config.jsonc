@@ -4,7 +4,6 @@
     "position": "top",
     "height": 34,
     "spacing": 20,
-    "margin": "10 10 0 10",
     "modules-left": [
         "hyprland/workspaces",
         "custom/drepos",
@@ -50,9 +49,8 @@
         "tooltip": false
     },
     "clock": {
-        "format": "{:%a %d/%m %H:%M:%S}",
+        "format": "{:%a %d/%m %H:%M}",
         "tooltip": false,
-        "interval": 1
     },
     "mpris": {
         "format": "{player_icon} {title}",
@@ -107,12 +105,10 @@
     "memory": {
         "format": "{}% ",
         "tooltip-format": "Swap: {swapPercentage}%",
-        "interval": 5
     },
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false,
-        "interval": 5
     },
     "backlight": {
         "format": "{percent}% {icon}",
@@ -146,7 +142,6 @@
             "critical": 20
         },
         "interval": 1,
-        "on-click": "tglbatcap"
     },
     "wireplumber": {
         "format": "{volume}% {icon}",
@@ -158,7 +153,6 @@
         ],
         "max-volume": 150,
         "tooltip": false,
-        "on-click": "pavucontrol"
     },
     "bluetooth": {
         "format": "",
@@ -173,19 +167,5 @@
         "format-ethernet": "",
         "format-wifi": "{signalStrength}% ",
         "tooltip-format": "{essid}",
-        "interval": 10
     },
-    "custom/power": {
-        "format" : "",
-        "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "logout": "hyprctl dispatch \"hl.dsp.exit()\"",
-            "shutdown": "shutdown now",
-            "reboot": "reboot",
-            "suspend": "systemctl suspend",
-            "hibernate": "systemctl hibernate"
-        }
-    }
 }

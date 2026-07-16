@@ -6,15 +6,13 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-    // Native neovim bindings
+    // Binds
     {
         "bindings": {
             "ctrl-y": "editor::ConfirmCompletion",
             "ctrl-l": "buffer_search::Dismiss",
         },
     },
-
-    // Custom neovim bindings
     {
         "context": "Editor && vim_mode == normal",
         "bindings": {
@@ -23,7 +21,6 @@
             "space e": "workspace::ToggleLeftDock",
         },
     },
-
     {
         "context": "!Editor && !Terminal",
         "bindings": {
@@ -31,15 +28,12 @@
             "space f /": "text_finder::Toggle",
         }
     },
-
     {
         "context": "ProjectPanel && not_editing",
         "bindings": {
             "space e": "workspace::ToggleLeftDock",
         },
     },
-
-    // Zed specific bind
     {
         "context": "Pane",
         "bindings": {
@@ -53,7 +47,7 @@
         },
     },
 
-    // Disable annoying keybinds
+    // Unbinds
     {
         "context": "Pane",
         "unbind": {
@@ -82,8 +76,6 @@
             "ctrl-q": "zed::Quit",
         },
     },
-
-    // Unused neovim keymaps
     {
         "context": "VimControl && !menu",
         "unbind": {

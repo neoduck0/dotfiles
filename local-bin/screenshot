@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# hyprshot - Screenshot script for Hyprland
+# screenshot - Screenshot script for Hyprland
 # Requirements: grim, slurp, hyprpicker, wl-copy, jq, hyprctl
 
 SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
@@ -15,7 +15,7 @@ check_deps() {
 
 usage() {
     cat <<EOF
-Usage: hyprshot <command>
+Usage: screenshot <command>
 
 Commands:
   screen   - Take a screenshot of the entire screen
