@@ -19,7 +19,6 @@
     file-decoration-style = none
     hunk-header-decoration-style = none
     line-numbers = true
-    side-by-side = true
 
 [merge]
     conflictstyle = zdiff3
