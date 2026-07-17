@@ -254,6 +254,8 @@ hl.workspace_rule({ workspace = "3", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "4", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "5", monitor = "HDMI-A-1" })
 
+hl.workspace_rule({ workspace = "special:magic", gaps_in = 5, gaps_out = 50  })
+
 local pin_clients = {
     "Picture-in-Picture",
     "Picture in picture",
