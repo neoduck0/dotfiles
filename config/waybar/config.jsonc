@@ -16,6 +16,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/tasks",
         "hyprland/language",
         "privacy",
         "power-profiles-daemon",
@@ -31,6 +32,11 @@
     ],
     "hyprland/workspaces": {
         "format": "{name}"
+    },
+    "custom/tasks": {
+        "exec": "task status:pending count",
+        "interval": 60,
+        "format": "{}"
     },
     "custom/drepos": {
         "exec": "drepos waybar",
