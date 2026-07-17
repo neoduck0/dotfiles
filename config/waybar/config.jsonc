@@ -27,8 +27,7 @@
         "battery",
         "wireplumber",
         "bluetooth",
-        "network",
-        "custom/power"
+        "network"
     ],
     "hyprland/workspaces": {
         "format": "{name}"
