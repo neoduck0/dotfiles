@@ -92,6 +92,8 @@ hl.config({
         blur = {
             enabled = false,
         },
+
+        dim_special = 0.8
     },
 
     animations = {
@@ -254,7 +256,7 @@ hl.workspace_rule({ workspace = "3", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "4", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "5", monitor = "HDMI-A-1" })
 
-hl.workspace_rule({ workspace = "special:magic", gaps_in = 5, gaps_out = 50  })
+hl.workspace_rule({ workspace = "special:magic", gaps_in = 20, gaps_out = 40  })
 
 local pin_clients = {
     "Picture-in-Picture",
