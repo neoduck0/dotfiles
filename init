@@ -44,8 +44,8 @@ USER_GROUPS = {
 SYSTEM_SERVICES = {
         "NetworkManager",
         "bluetooth",
-        "tailscaled",
         "keyd"
+        "tailscaled",
         }
 USER_SERVICES = {
         "mako"
