@@ -1,0 +1,182 @@
+#!/usr/bin/python
+
+import getpass
+import subprocess
+
+def main():
+    install_packages()
+    enable_services()
+    add_user_groups()
+
+def install_packages():
+    try:
+        subprocess.run(
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm"] + sorted(PACKAGES),
+            check=True,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to install packages: {e}")
+
+def add_user_groups():
+    user = getpass.getuser()
+    for group in USER_GROUPS:
+        try:
+            subprocess.run(["sudo", "usermod", "-aG", group, user], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to add {user} to {group}: {e}")
+
+def enable_services():
+    for service in SYSTEM_SERVICES:
+        try:
+            subprocess.run(["sudo", "systemctl", "enable", service], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to enable {service}: {e}")
+
+    for service in USER_SERVICES:
+        try:
+            subprocess.run(["systemctl", "enable", "--user", service], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to enable {service}: {e}")
+
+USER_GROUPS = {
+        "libvirt"
+        }
+SYSTEM_SERVICES = {
+        "NetworkManager",
+        "bluetooth",
+        "tailscaled",
+        "keyd"
+        }
+USER_SERVICES = {
+        "mako"
+        }
+PACKAGES = {
+        "adw-gtk-theme",
+        "audacity",
+        "base",
+        "base-devel",
+        "bluetui",
+        "bluez",
+        "bluez-utils",
+        "breeze",
+        "brightnessctl",
+        "btrfs-progs",
+        "caligula",
+        "clang",
+        "cliphist",
+        "cmake",
+        "curl",
+        "dmidecode",
+        "dnsmasq",
+        "docker",
+        "docker-compose",
+        "dosfstools",
+        "exfatprogs",
+        "fd",
+        "ffmpeg",
+        "firefox",
+        "foot",
+        "fzf",
+        "gimp",
+        "git",
+        "git-delta",
+        "gnome-keyring",
+        "go",
+        "gptfdisk",
+        "grim",
+        "grub",
+        "gst-plugin-pipewire",
+        "gvfs-mtp",
+        "htop",
+        "hypridle",
+        "hyprland",
+        "hyprlock",
+        "hyprpaper",
+        "hyprpicker",
+        "hyprshutdown",
+        "imagemagick",
+        "intel-ucode",
+        "jq",
+        "keyd",
+        "libreoffice-fresh",
+        "linux",
+        "linux-firmware",
+        "mako",
+        "man-db",
+        "mpv",
+        "mpv-mpris",
+        "nautilus",
+        "neovim",
+        "networkmanager",
+        "nodejs",
+        "noto-fonts",
+        "noto-fonts-emoji",
+        "ntfs-3g",
+        "ntfsprogs",
+        "obs-studio",
+        "openai-codex",
+        "opencode",
+        "openssh",
+        "pacman-contrib",
+        "pavucontrol",
+        "php",
+        "pipewire",
+        "pipewire-alsa",
+        "pipewire-jack",
+        "pipewire-pulse",
+        "polkit-gnome",
+        "power-profiles-daemon",
+        "proton-vpn-cli",
+        "pyside6",
+        "python",
+        "qbittorrent",
+        "qemu-full",
+        "qt5-wayland",
+        "qt5ct",
+        "qt6-wayland",
+        "qt6ct",
+        "rclone",
+        "ripgrep",
+        "rofi",
+        "rofi-emoji",
+        "rust",
+        "seahorse",
+        "shotcut",
+        "slurp",
+        "sof-firmware",
+        "spice-vdagent",
+        "sudo",
+        "swayimg",
+        "swtpm",
+        "syncplay",
+        "tailscale",
+        "task",
+        "tmux",
+        "tree",
+        "ttf-jetbrains-mono-nerd",
+        "typescript",
+        "udisks2",
+        "ufw",
+        "unzip",
+        "uwsm",
+        "valgrind",
+        "virt-manager",
+        "vulkan-intel",
+        "waybar",
+        "wev",
+        "wireplumber",
+        "wl-clip-persist",
+        "wl-clipboard",
+        "xdg-desktop-portal-gtk",
+        "xdg-desktop-portal-hyprland",
+        "yt-dlp",
+        "zathura",
+        "zathura-pdf-mupdf",
+        "zed",
+        "zip",
+        "zram-generator",
+        "zsh",
+}
+
+if __name__ == "__main__":
+    main()
