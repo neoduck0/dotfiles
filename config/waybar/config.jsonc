@@ -138,8 +138,7 @@
         ],
         "tooltip-format": "Health: {health}%",
         "states": {
-            "warning": 30,
-            "critical": 20
+            "critical": 30
         },
         "interval": 1,
     },
