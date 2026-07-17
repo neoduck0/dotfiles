@@ -105,5 +105,11 @@
         "unbind": {
             "space f": "file_finder::Toggle"
         }
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-;": "editor::ToggleLineNumbers"
+        }
     }
 ]
