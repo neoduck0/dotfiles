@@ -186,17 +186,17 @@ hl.bind(mainMod .. " + SHIFT + bracketright", hl.dsp.window.swap({ direction = "
 
 hl.bind(mainMod .. " + tab", hl.dsp.window.cycle_next(), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }), { dont_inhibit = true })
 
 for i = 1, 5 do
-    hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i}))
+    hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i}), { dont_inhibit = true })
     hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(mainMod .. " + 0", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + 0", hl.dsp.workspace.toggle_special("magic"), { dont_inhibit = true })
 hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "special:magic" }))
 
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
