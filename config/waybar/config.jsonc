@@ -7,6 +7,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/drepos",
+        "custom/tasks",
         "wlr/taskbar",
         "mpris",
         "hyprland/submap"
@@ -16,7 +17,6 @@
     ],
     "modules-right": [
         "tray",
-        "custom/tasks",
         "hyprland/language",
         "privacy",
         "power-profiles-daemon",
@@ -35,7 +35,7 @@
     "custom/tasks": {
         "exec": "task status:pending count",
         "interval": 60,
-        "format": "{}"
+        "format": " {}",
     },
     "custom/drepos": {
         "exec": "drepos waybar",
