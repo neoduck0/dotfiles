@@ -151,40 +151,40 @@ hl.gesture({
 
 local mainMod = "SUPER"
 
-hl.bind(mainMod .. " + delete", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + delete", hl.dsp.exec_cmd("hyprlock"), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(emojiPicker))
+hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal), { dont_inhibit = true })
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(fileManager), { dont_inhibit = true })
+hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd(browser), { dont_inhibit = true })
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(menu), { dont_inhibit = true })
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard), { dont_inhibit = true })
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(emojiPicker), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("playerctl play-pause"))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("playerctl play-pause"), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + backspace", hl.dsp.window.close())
-hl.bind(mainMod .. " + backslash", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + I", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + U", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + P", hl.dsp.window.pin())
+hl.bind(mainMod .. " + backspace", hl.dsp.window.close(), { dont_inhibit = true })
+hl.bind(mainMod .. " + backslash", hl.dsp.window.float({ action = "toggle" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + I", hl.dsp.window.pseudo(), { dont_inhibit = true })
+hl.bind(mainMod .. " + U", hl.dsp.layout("togglesplit"), { dont_inhibit = true })
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen(), { dont_inhibit = true })
+hl.bind(mainMod .. " + P", hl.dsp.window.pin(), { dont_inhibit = true })
 
-hl.bind("print", hl.dsp.exec_cmd("screenshot screen"))
-hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("screenshot region"))
+hl.bind("print", hl.dsp.exec_cmd("screenshot screen"), { dont_inhibit = true })
+hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("screenshot region"), { dont_inhibit = true })
 
 hl.bind(mainMod .. " + semicolon", hl.dsp.window.resize({ x = "-40", y = "0", relative = true }),
-    { repeating = true })
+    { dont_inhibit = true, repeating = true })
 hl.bind(mainMod .. " + SHIFT + semicolon", hl.dsp.window.resize({ x = "0", y = "40", relative = true }),
-    { repeating = true })
+    { dont_inhibit = true, repeating = true })
 hl.bind(mainMod .. " + apostrophe", hl.dsp.window.resize({ x = "40", y = "0", relative = true }),
-    { repeating = true })
+    { dont_inhibit = true, repeating = true })
 hl.bind(mainMod .. " + SHIFT + apostrophe", hl.dsp.window.resize({ x = "0", y = "-40", relative = true }),
-    { repeating = true })
+    { dont_inhibit = true, repeating = true })
 
-hl.bind(mainMod .. " + bracketleft", hl.dsp.window.swap({ direction = "left" }))
-hl.bind(mainMod .. " + SHIFT + bracketleft", hl.dsp.window.swap({ direction = "down" }))
-hl.bind(mainMod .. " + bracketright", hl.dsp.window.swap({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + bracketright", hl.dsp.window.swap({ direction = "up" }))
+hl.bind(mainMod .. " + bracketleft", hl.dsp.window.swap({ direction = "left" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + SHIFT + bracketleft", hl.dsp.window.swap({ direction = "down" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + bracketright", hl.dsp.window.swap({ direction = "right" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + SHIFT + bracketright", hl.dsp.window.swap({ direction = "up" }), { dont_inhibit = true })
 
 hl.bind(mainMod .. " + tab", hl.dsp.window.cycle_next(), { dont_inhibit = true })
 
@@ -195,55 +195,55 @@ hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }), { dont_inhibit 
 
 for i = 1, 5 do
     hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i}), { dont_inhibit = true })
-    hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }), { dont_inhibit = true })
 end
 
 hl.bind(mainMod .. " + 0", hl.dsp.workspace.toggle_special("magic"), { dont_inhibit = true })
-hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "special:magic" }), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = true })
+hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { dont_inhibit = true, mouse = true })
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { dont_inhibit = true, mouse = true })
 
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { locked = true, repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { locked = true, repeating = true })
-hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { dont_inhibit = true, locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { dont_inhibit = true, locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { dont_inhibit = true, locked = true, repeating = true })
+hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"), { dont_inhibit = true, locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { dont_inhibit = true, locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { dont_inhibit = true, locked = true, repeating = true })
 
-hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
-hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
-hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { dont_inhibit = true, locked = true })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { dont_inhibit = true, locked = true })
+hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { dont_inhibit = true, locked = true })
+hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { dont_inhibit = true, locked = true })
 
-hl.bind(mainMod .. " + f1", hl.dsp.submap("Control"))
+hl.bind(mainMod .. " + f1", hl.dsp.submap("Control"), { dont_inhibit = true })
 hl.define_submap("Control", function()
-    hl.bind("d", hl.dsp.dpms({ action = "toggle", monitor = "current" }))
+    hl.bind("d", hl.dsp.dpms({ action = "toggle", monitor = "current" }), { dont_inhibit = true })
 
     hl.bind("h", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"),
-        { locked = true, repeating = true })
+        { dont_inhibit = true, locked = true, repeating = true })
     hl.bind("SHIFT+ h", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-"),
-        { locked = true, repeating = true })
+        { dont_inhibit = true, locked = true, repeating = true })
 
     hl.bind("j", hl.dsp.exec_cmd("brightnessctl s 5%-"),
-        { locked = true, repeating = true })
+        { dont_inhibit = true, locked = true, repeating = true })
     hl.bind("SHIFT + j", hl.dsp.exec_cmd("brightnessctl s 1%-"),
-        { locked = true, repeating = true })
+        { dont_inhibit = true, locked = true, repeating = true })
 
     hl.bind("k", hl.dsp.exec_cmd("brightnessctl s 5%+"),
-        { locked = true, repeating = true})
+        { dont_inhibit = true, locked = true, repeating = true})
     hl.bind("SHIFT + k", hl.dsp.exec_cmd("brightnessctl s 1%+"),
-        { locked = true, repeating = true})
+        { dont_inhibit = true, locked = true, repeating = true})
 
     hl.bind("l", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
-        { locked = true, repeating = true})
+        { dont_inhibit = true, locked = true, repeating = true})
     hl.bind("SHIFT+ l", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+"),
-        { locked = true, repeating = true})
+        { dont_inhibit = true, locked = true, repeating = true})
 
-    hl.bind("escape", hl.dsp.submap("reset"))
+    hl.bind("escape", hl.dsp.submap("reset"), { dont_inhibit = true })
 end)
 
 --------------------------------
