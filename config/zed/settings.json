@@ -16,7 +16,7 @@
         "mode": "subtle"
     },
     "git": {
-        "disable_git": true,
+        "disable_git": false
     },
     "show_edit_predictions": true,
     "collaboration_panel": {
