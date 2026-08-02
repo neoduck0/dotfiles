@@ -1,6 +1,6 @@
 ZSH_THEME="sorin"
 
-plugins=(git tmux vi-mode)
+plugins=(git tmux vi-mode extract)
 
 if [ -f $ZDOTDIR/ohmyzsh/oh-my-zsh.sh ]; then
     source $ZDOTDIR/ohmyzsh/oh-my-zsh.sh
