@@ -56,6 +56,14 @@ map("n", "<leader>sk", function()
 	Snacks.picker.keymaps()
 end, { desc = "Keymaps" })
 
+map("n", "<leader>sr", function()
+	Snacks.picker.lsp_references()
+end, { desc = "References" })
+
+map("n", "<leader>uC", function()
+	Snacks.picker.colorschemes()
+end, { desc = "Colorschemes" })
+
 map("n", "gd", function()
 	Snacks.picker.lsp_definitions()
 end, { desc = "Goto Definition" })
@@ -63,10 +71,6 @@ end, { desc = "Goto Definition" })
 map("n", "gD", function()
 	Snacks.picker.lsp_declarations()
 end, { desc = "Goto Declaration" })
-
-map("n", "gr", function()
-	Snacks.picker.lsp_references()
-end, { nowait = true, desc = "References" })
 
 map("n", "gI", function()
 	Snacks.picker.lsp_implementations()

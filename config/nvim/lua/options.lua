@@ -18,3 +18,6 @@ vim.opt.wrap = false
 vim.opt.colorcolumn = "80"
 
 vim.opt.spelllang = "en_us"
+
+vim.opt.undofile = true
+vim.opt.undolevels = 10000
