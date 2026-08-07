@@ -1,5 +1,3 @@
-export PATH=~/.local/bin:"$PATH"
-
 export EDITOR=nvim
 
 export ZDOTDIR=~/.config/zsh
@@ -12,3 +10,6 @@ export FZF_ALT_C_COMMAND="fd --type d"
 
 export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_QPA_PLATFORM=wayland
+
+export PATH=~/.local/bin:"$PATH"
+export PATH=$GOPATH/bin:"$PATH"
