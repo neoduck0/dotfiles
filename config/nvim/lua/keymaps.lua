@@ -136,6 +136,14 @@ map("n", "<leader>uD", function()
 	Snacks.toggle.dim():toggle()
 end, { desc = "Dimming" })
 
-map("i", "<M-o>", function()
+map("i", "<M-l>", function()
 	require("copilot.suggestion").accept()
 end, { desc = "Accept Copilot Suggestion" })
+
+map("i", "<M-p>", function()
+	require("copilot.suggestion").prev()
+end, { desc = "Previous Copilot Suggestion" })
+
+map("i", "<M-n>", function()
+	require("copilot.suggestion").next()
+end, { desc = "Next Copilot Suggestion" })
