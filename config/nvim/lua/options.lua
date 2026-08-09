@@ -21,3 +21,5 @@ vim.opt.spelllang = "en_us"
 
 vim.opt.undofile = true
 vim.opt.undolevels = 10000
+
+vim.opt.autoread = true
