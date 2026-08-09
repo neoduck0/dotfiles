@@ -1,4 +1,4 @@
-ZSH_THEME="sorin"
+ZSH_THEME="refined"
 
 plugins=(git tmux vi-mode extract)
 
