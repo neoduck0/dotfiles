@@ -1,4 +1,4 @@
-ZSH_THEME="refined"
+ZSH_THEME="gallifrey"
 
 plugins=(git tmux vi-mode extract)
 

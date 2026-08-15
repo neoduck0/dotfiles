@@ -2,13 +2,12 @@
     highlight: bold italic;
     scrollbar: true;
 
-    bg: #000000;
-    bg-sel: #2a2a2a;
-    border: #333333;
-    fg: #ffffff;
-    red: #ff0000;
-    green: #00ff00;
-    orange: #FFA500;
+    bg: #2e3440;
+    bg-sel: #434c5e;
+    border: #3b4252;
+    fg: #d8dee9;
+    red: #bf616a;
+    green: #a3be8c;
 }
 
 window {
@@ -52,7 +51,7 @@ element.normal.active {
 
 element.selected.normal {
     background-color: @bg-sel;
-    text-color: @orange;
+    text-color: @fg;
 }
 
 element.selected.urgent {
@@ -95,7 +94,7 @@ case-indicator, entry, prompt, button {
 
 button.selected {
     background-color: @bg-sel;
-    text-color: @orange;
+    text-color: @fg;
 }
 
 textbox-prompt-sep {

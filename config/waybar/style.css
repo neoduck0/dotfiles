@@ -3,8 +3,8 @@
 }
 
 #waybar {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #2e3440;
+  color: #d8dee9;
   font-size: 12px;
 }
 
@@ -22,15 +22,15 @@ button {
 }
 
 #workspaces button label {
-  color: #888888;
+  color: #4c566a;
 }
 
 #workspaces button.active label {
-  color: #ffffff;
+  color: #d8dee9;
 }
 
 #power-profiles-daemon.performance {
-  color: #ff00ff;
+  color: #b48ead;
 }
 
 #workspaces button.urgent label
@@ -39,12 +39,12 @@ button {
 #bluetooth.on,
 #network.disconnected,
 #custom-drepos.dirty {
-  color: #ff0000;
+  color: #bf616a;
 }
 
 #power-profiles-daemon.power-saver,
 #bluetooth.connected,
 #battery.charging,
 #battery.plugged {
-  color: #00ff00;
+  color: #a3be8c;
 }

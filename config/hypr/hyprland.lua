@@ -50,8 +50,10 @@ end)
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("XCURSOR_SIZE", "28")
+hl.env("XCURSOR_THEME", "Nordzy-cursors-white")
+hl.env("HYPRCURSOR_SIZE", "28")
+hl.env("HYPRCURSOR_THEME", "Nordzy-hyprcursors-white")
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -59,14 +61,14 @@ hl.env("HYPRCURSOR_SIZE", "24")
 
 hl.config({
 	general = {
-		gaps_in = 0,
-		gaps_out = 0,
+		gaps_in = 5,
+		gaps_out = 10,
 
 		border_size = 2,
 
 		col = {
-			active_border = "#888888",
-			inactive_border = "#333333",
+			active_border = "#c0c8d8",
+			inactive_border = "#3b4252",
 		},
 
 		resize_on_border = false,
@@ -94,7 +96,7 @@ hl.config({
 	},
 
 	animations = {
-		enabled = false,
+		enabled = true,
 	},
 })
 
@@ -102,6 +104,13 @@ hl.config({
 	dwindle = {
 		preserve_split = true,
 	},
+})
+
+hl.animation({
+	leaf = "global",
+	enabled = true,
+	speed = 1,
+	bezier = "default",
 })
 
 ----------------
