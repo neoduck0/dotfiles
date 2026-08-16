@@ -1,9 +1,9 @@
 #!/bin/python
 
+import json
 import os
 import subprocess
 import sys
-import json
 
 PROJECTS_DIR = os.path.expanduser("~/Projects/")
 
@@ -39,10 +39,10 @@ def waybar():
     repos = repositories()
     count = len(repos)
     if count == 0:
-        return json.dumps({"text": " " + str(count)})
+        return json.dumps({"text": " " + str(count)})
     return json.dumps(
         {
-            "text": " " + str(count),
+            "text": " " + str(count),
             "tooltip": "\n".join(repos),
             "class": "dirty",
         }
