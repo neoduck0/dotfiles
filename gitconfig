@@ -5,20 +5,34 @@
 	name = neoduck0
 	email = 219318428+neoduck0@users.noreply.github.com
 
-[core]
-    pager = delta
-
-[interactive]
-    diffFilter = delta --color-only
-
 [diff]
     algorithm = histogram
     colorMoved = default
 
-[delta]
-    file-decoration-style = none
-    hunk-header-decoration-style = none
-    line-numbers = true
+[color]
+    ui = auto
+
+[color "diff"]
+    meta = yellow
+    frag = magenta bold
+    func = cyan bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold reverse
+    newNormal = green bold
+    newHighlight = green bold reverse
+
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
 
 [merge]
     conflictstyle = zdiff3
