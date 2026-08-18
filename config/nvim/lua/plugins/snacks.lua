@@ -6,7 +6,14 @@ return {
 		explorer = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			sources = {
+				grep = {
+					exclude = { "LICENSE*", "LICENCE*" },
+				},
+			},
+		},
 		notifier = { enabled = true },
 		quickfile = { enabled = true },
 		scope = { enabled = true },
