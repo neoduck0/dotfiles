@@ -1,5 +1,13 @@
 local map = vim.keymap.set
 
+map("n", "]c", function()
+	require("gitsigns").nav_hunk("next")
+end, { desc = "Next Hunk" })
+
+map("n", "[c", function()
+	require("gitsigns").nav_hunk("prev")
+end, { desc = "Prev Hunk" })
+
 map("n", "<leader>,", function()
 	Snacks.picker.buffers()
 end, { desc = "Buffers" })
