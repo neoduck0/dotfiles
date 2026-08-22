@@ -8,6 +8,9 @@ return {
 		input = { enabled = true },
 		picker = {
 			enabled = true,
+			exclude = {
+				"node_modules",
+			},
 			sources = {
 				grep = {
 					exclude = { "LICENSE*", "LICENCE*" },
