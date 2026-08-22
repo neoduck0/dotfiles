@@ -70,7 +70,8 @@
         "title-len": 30
     },
     "tray": {
-        "icon-size": 12
+        "icon-size": 12,
+        "spacing": 20
     },
     "hyprland/language": {
         "format": "{}",
