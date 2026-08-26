@@ -1,0 +1,64 @@
+#!/usr/bin/python
+
+import getpass
+import subprocess
+from pathlib import Path
+
+
+def read_list_file(name) -> list[str]:
+    path = Path(__file__).parent / name
+    items = []
+    with path.open() as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#"):
+                items.append(line)
+    return items
+
+
+def main() -> None:
+    packages = read_list_file("_pkgs")
+    system_services = read_list_file("_services")
+    user_services = read_list_file("_uservices")
+    groups = read_list_file("_groups")
+
+    install_packages(packages)
+    enable_services(system_services, user_services)
+    add_user_groups(groups)
+
+
+def install_packages(packages: list[str]) -> None:
+    try:
+        subprocess.run(
+            ["sudo", "pacman", "-S", "--needed", "--noconfirm"] + sorted(packages),
+            check=True,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to install packages: {e}")
+
+
+def add_user_groups(groups: list[str]) -> None:
+    user = getpass.getuser()
+    for group in groups:
+        try:
+            subprocess.run(["sudo", "usermod", "-aG", group, user], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to add {user} to {group}: {e}")
+
+
+def enable_services(system_services: list[str], user_services: list[str]) -> None:
+    for service in system_services:
+        try:
+            subprocess.run(["sudo", "systemctl", "enable", service], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to enable {service}: {e}")
+
+    for service in user_services:
+        try:
+            subprocess.run(["systemctl", "enable", "--user", service], check=True)
+        except subprocess.CalledProcessError as e:
+            print(f"Failed to enable {service}: {e}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,50 @@
+* {
+  font-family: JetBrainsMono Nerd Font Propo, sans-serif;
+}
+
+#waybar {
+  background-color: #2e3440;
+  color: #d8dee9;
+  font-size: 12px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0px 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0px 5px;
+  transition: none;
+}
+
+#workspaces button label {
+  color: #4c566a;
+}
+
+#workspaces button.active label {
+  color: #d8dee9;
+}
+
+#power-profiles-daemon.performance {
+  color: #b48ead;
+}
+
+#workspaces button.urgent label
+#battery.critical,
+#wireplumber.muted,
+#bluetooth.on,
+#network.disconnected,
+#custom-drepos.dirty {
+  color: #bf616a;
+}
+
+#power-profiles-daemon.power-saver,
+#bluetooth.connected,
+#battery.charging,
+#battery.plugged {
+  color: #a3be8c;
+}

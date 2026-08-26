@@ -1,0 +1,109 @@
+* {
+    highlight: bold italic;
+    scrollbar: true;
+
+    bg: #2e3440;
+    bg-sel: #434c5e;
+    border: #3b4252;
+    fg: #d8dee9;
+    red: #bf616a;
+    green: #a3be8c;
+}
+
+window {
+    background-color: @bg;
+    border-color: @border;
+    width: 500;
+    font: "JetBrainsMono Nerd Font Mono 12";
+}
+
+message {
+    border-color: @fg;
+}
+
+textbox {
+    highlight: @highlight;
+    text-color: @fg;
+}
+
+listview {
+    border-color: @border;
+}
+
+scrollbar {
+    handle-color: @border;
+}
+
+element.normal.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element.normal.urgent {
+    background-color: @red;
+    text-color: @bg;
+}
+
+element.normal.active {
+    background-color: @green;
+    text-color: @bg;
+}
+
+element.selected.normal {
+    background-color: @bg-sel;
+    text-color: @fg;
+}
+
+element.selected.urgent {
+    background-color: @red;
+    text-color: @bg;
+}
+
+element.selected.active {
+    background-color: @green;
+    text-color: @bg;
+}
+
+element.alternate.normal {
+    background-color: @bg;
+    text-color: @fg;
+}
+
+element.alternate.urgent {
+    background-color: @red;
+    text-color: @bg;
+}
+
+element.alternate.active {
+    background-color: @green;
+    text-color: @bg;
+}
+
+mode-switcher {
+    border-color: @border;
+}
+
+inputbar {
+    text-color: @fg;
+    children: [ prompt, textbox-prompt-sep, entry, case-indicator ];
+}
+
+case-indicator, entry, prompt, button {
+    text-color: @fg;
+}
+
+button.selected {
+    background-color: @bg-sel;
+    text-color: @fg;
+}
+
+textbox-prompt-sep {
+    expand: false;
+    str: ": ";
+    text-color: @fg;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}

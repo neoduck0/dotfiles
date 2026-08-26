@@ -1,0 +1,102 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    // Binds
+    {
+        "bindings": {
+            "ctrl-y": "editor::ConfirmCompletion",
+            "ctrl-l": "buffer_search::Dismiss",
+        },
+    },
+    {
+        "context": "Editor && vim_mode == normal",
+        "bindings": {
+            "space f f": "file_finder::Toggle",
+            "space f /": "text_finder::Toggle",
+        },
+    },
+    {
+        "context": "!Editor && !Terminal",
+        "bindings": {
+            "space f f": "file_finder::Toggle",
+            "space f /": "text_finder::Toggle",
+        }
+    },
+    {
+        "context": "Pane",
+        "bindings": {
+            "ctrl-q": "pane::CloseActiveItem",
+        },
+    },
+
+    // Unbinds
+    {
+        "context": "Pane",
+        "unbind": {
+            "ctrl-w": [
+                "pane::CloseActiveItem",
+                {
+                    "close_pinned": false,
+                },
+            ],
+        },
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-l": "editor::SelectLine",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-n": "workspace::NewFile",
+        },
+    },
+    {
+        "unbind": {
+            "ctrl-q": "zed::Quit",
+        },
+    },
+    {
+        "context": "VimControl && !menu",
+        "unbind": {
+            "ctrl-q": "vim::ToggleVisualBlock",
+        },
+    },
+    {
+        "context": "Workspace",
+        "unbind": {
+            "ctrl-t": "project_symbols::Toggle",
+        },
+    },
+    {
+        "context": "Editor && edit_prediction && edit_prediction_mode == eager && !showing_completions",
+        "unbind": {
+            "tab": "editor::AcceptEditPrediction",
+        },
+    },
+    {
+        "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
+        "unbind": {
+            "space f": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "!Editor && !Terminal",
+        "unbind": {
+            "space f": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "Editor",
+        "unbind": {
+            "ctrl-;": "editor::ToggleLineNumbers"
+        }
+    }
+]
