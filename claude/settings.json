@@ -1,0 +1,15 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "model": "opus",
+  "syntaxHighlightingDisabled": false,
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "theme": "dark-ansi",
+  "editorMode": "normal"
+}
