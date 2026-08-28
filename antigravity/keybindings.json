@@ -1,0 +1,19 @@
+{
+    "navigation.up": [
+        "up",
+        "ctrl+p"
+    ],
+    "navigation.down": [
+        "down",
+        "ctrl+n"
+    ],
+    "navigation.page_up": [
+        "ctrl+u"
+    ],
+    "navigation.page_down": [
+        "ctrl+d"
+    ],
+    "cli.exit": [
+        "ctrl+q"
+    ]
+}
