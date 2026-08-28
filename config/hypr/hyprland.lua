@@ -263,6 +263,8 @@ hl.bind(mainMod .. " + f1", hl.dsp.submap("Control"), { dont_inhibit = true })
 hl.define_submap("Control", function()
 	hl.bind("d", hl.dsp.dpms({ action = "toggle", monitor = "current" }), { dont_inhibit = true })
 
+	hl.bind("m", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { dont_inhibit = true, locked = true })
+
 	hl.bind(
 		"h",
 		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"),
