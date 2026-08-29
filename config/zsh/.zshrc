@@ -1,4 +1,4 @@
-ZSH_THEME="gallifrey"
+ZSH_THEME="essembeh"
 
 plugins=(git vi-mode extract)
 
