@@ -11,5 +11,5 @@
     }
   },
   "theme": "dark-ansi",
-  "editorMode": "normal"
+  "editorMode": "vim"
 }
