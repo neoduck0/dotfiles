@@ -14,3 +14,5 @@ KEYTIMEOUT=1
 source <(fzf --zsh)
 
 setopt IGNOREEOF
+
+source $ZDOTDIR/herdr.zsh
