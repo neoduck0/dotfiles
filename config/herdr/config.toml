@@ -1,0 +1,16 @@
+onboarding = false
+[theme]
+name = "nord"
+
+[keys]
+prefix = "ctrl+a"
+detach = "prefix+d"
+split_horizontal = "prefix+s"
+settings = "prefix+shift+s"
+
+[ui]
+prompt_new_tab_name = false
+tab_bar_position = "bottom"
+
+[ui.toast]
+delivery = "system"
