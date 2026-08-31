@@ -144,6 +144,10 @@ map("n", "<leader>uD", function()
 	Snacks.toggle.dim():toggle()
 end, { desc = "Dimming" })
 
+map("n", "<leader>z", function()
+	Snacks.zen()
+end, { desc = "Toggle Zen Mode" })
+
 map("i", "<M-l>", function()
 	require("copilot.suggestion").accept()
 end, { desc = "Accept Copilot Suggestion" })

@@ -23,5 +23,11 @@ return {
 		scroll = { enabled = false },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
+		zen = {
+			enabled = true,
+			toggles = {
+				dim = false,
+			},
+		},
 	},
 }
