@@ -59,7 +59,7 @@
     "theme": {
         "mode": "dark",
         "light": "One Light",
-        "dark": "Nordic Syntax",
+        "dark": "Nordic",
     },
 
     "tab_size": 4,
