@@ -158,8 +158,8 @@ local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + delete", hl.dsp.exec_cmd("hyprlock"), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal .. " " .. multiplexer), { dont_inhibit = true })
-hl.bind(mainMod .. " + SHIFT + return", hl.dsp.exec_cmd(terminal), { dont_inhibit = true })
+hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal), { dont_inhibit = true })
+hl.bind(mainMod .. " + SHIFT + return", hl.dsp.exec_cmd(terminal .. " " .. multiplexer), { dont_inhibit = true })
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(fileManager), { dont_inhibit = true })
 hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd(browser), { dont_inhibit = true })
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(menu), { dont_inhibit = true })
