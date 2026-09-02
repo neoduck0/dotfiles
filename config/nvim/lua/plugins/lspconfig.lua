@@ -4,7 +4,6 @@ return {
 	config = function()
 		vim.lsp.enable("clangd")
 		vim.lsp.enable("cssls")
-		vim.lsp.enable("eslint")
 		vim.lsp.enable("gopls")
 		vim.lsp.enable("html")
 		vim.lsp.enable("jsonls")
