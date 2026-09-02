@@ -11,9 +11,12 @@ return {
 			go = { "gofmt" },
 			html = { "prettier" },
 			javascript = { "prettier" },
+			javascriptreact = { "prettier" },
 			json = { "jq" },
 			lua = { "stylua" },
 			python = { "ruff" },
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
 		},
 		format_on_save = {
 			timeout_ms = 500,
