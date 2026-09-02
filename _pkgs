@@ -27,11 +27,11 @@ fd
 ffmpeg
 firefox
 flatpak
-foot
 fzf
 gdb
 gimp
 git
+github-cli
 gnome-keyring
 go
 gofumpt
@@ -52,6 +52,7 @@ imagemagick
 intel-ucode
 jq
 keyd
+kitty
 kvantum
 kvantum-qt5
 libreoffice-fresh
@@ -115,7 +116,7 @@ swtpm
 syncplay
 tailscale
 task
-tmux
+termdown
 tree
 tree-sitter-cli
 ttf-jetbrains-mono-nerd
