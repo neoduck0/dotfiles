@@ -16,3 +16,5 @@ source <(fzf --zsh)
 setopt IGNOREEOF
 
 source $ZDOTDIR/herdr.zsh
+
+alias oc=opencode
