@@ -33,7 +33,7 @@ button {
   color: #b48ead;
 }
 
-#workspaces button.urgent label
+#workspaces button.urgent label,
 #battery.critical,
 #wireplumber.muted,
 #bluetooth.on,
