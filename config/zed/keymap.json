@@ -17,14 +17,14 @@
         "context": "Editor && vim_mode == normal",
         "bindings": {
             "space f f": "file_finder::Toggle",
-            "space f /": "text_finder::Toggle",
+            "space /": "text_finder::Toggle",
         },
     },
     {
         "context": "!Editor && !Terminal",
         "bindings": {
             "space f f": "file_finder::Toggle",
-            "space f /": "text_finder::Toggle",
+            "space /": "text_finder::Toggle",
         }
     },
     {
