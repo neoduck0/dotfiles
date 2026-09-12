@@ -169,6 +169,11 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard), { dont_inhibit = true })
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(emojiPicker), { dont_inhibit = true })
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("playerctl play-pause"), { dont_inhibit = true })
+hl.bind(
+	mainMod .. " + M",
+	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+	{ dont_inhibit = true, locked = true }
+)
 
 hl.bind(mainMod .. " + backspace", hl.dsp.window.close(), { dont_inhibit = true })
 hl.bind(mainMod .. " + backslash", hl.dsp.window.float({ action = "toggle" }), { dont_inhibit = true })
@@ -176,6 +181,7 @@ hl.bind(mainMod .. " + I", hl.dsp.window.pseudo(), { dont_inhibit = true })
 hl.bind(mainMod .. " + U", hl.dsp.layout("togglesplit"), { dont_inhibit = true })
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen(), { dont_inhibit = true })
 hl.bind(mainMod .. " + P", hl.dsp.window.pin(), { dont_inhibit = true })
+hl.bind(mainMod .. " + D", hl.dsp.dpms({ action = "toggle", monitor = "current" }), { dont_inhibit = true })
 
 hl.bind("print", hl.dsp.exec_cmd("screenshot screen"), { dont_inhibit = true })
 hl.bind(mainMod .. " + s", hl.dsp.exec_cmd("screenshot region"), { dont_inhibit = true })
@@ -263,50 +269,49 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { dont_inhibi
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { dont_inhibit = true, locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { dont_inhibit = true, locked = true })
 
-hl.bind(mainMod .. " + f1", hl.dsp.submap("Control"), { dont_inhibit = true })
-hl.define_submap("Control", function()
-	hl.bind("d", hl.dsp.dpms({ action = "toggle", monitor = "current" }), { dont_inhibit = true })
+hl.bind(
+	mainMod .. " + left",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
+hl.bind(
+	mainMod .. " + SHIFT + left",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
 
-	hl.bind("m", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), { dont_inhibit = true, locked = true })
+hl.bind(
+	mainMod .. " + down",
+	hl.dsp.exec_cmd("brightnessctl s 5%-"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
+hl.bind(
+	mainMod .. " + SHIFT + down",
+	hl.dsp.exec_cmd("brightnessctl s 1%-"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
 
-	hl.bind(
-		"h",
-		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"),
-		{ dont_inhibit = true, locked = true, repeating = true }
-	)
-	hl.bind(
-		"SHIFT+ h",
-		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%-"),
-		{ dont_inhibit = true, locked = true, repeating = true }
-	)
+hl.bind(
+	mainMod .. " + up",
+	hl.dsp.exec_cmd("brightnessctl s 5%+"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
+hl.bind(
+	mainMod .. " + SHIFT + up",
+	hl.dsp.exec_cmd("brightnessctl s 1%+"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
 
-	hl.bind("j", hl.dsp.exec_cmd("brightnessctl s 5%-"), { dont_inhibit = true, locked = true, repeating = true })
-	hl.bind(
-		"SHIFT + j",
-		hl.dsp.exec_cmd("brightnessctl s 1%-"),
-		{ dont_inhibit = true, locked = true, repeating = true }
-	)
-
-	hl.bind("k", hl.dsp.exec_cmd("brightnessctl s 5%+"), { dont_inhibit = true, locked = true, repeating = true })
-	hl.bind(
-		"SHIFT + k",
-		hl.dsp.exec_cmd("brightnessctl s 1%+"),
-		{ dont_inhibit = true, locked = true, repeating = true }
-	)
-
-	hl.bind(
-		"l",
-		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
-		{ dont_inhibit = true, locked = true, repeating = true }
-	)
-	hl.bind(
-		"SHIFT+ l",
-		hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+"),
-		{ dont_inhibit = true, locked = true, repeating = true }
-	)
-
-	hl.bind("escape", hl.dsp.submap("reset"), { dont_inhibit = true })
-end)
+hl.bind(
+	mainMod .. " + right",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
+hl.bind(
+	mainMod .. " + SHIFT + right",
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 1%+"),
+	{ dont_inhibit = true, locked = true, repeating = true }
+)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
