@@ -144,6 +144,20 @@ map("n", "<leader>uD", function()
 	Snacks.toggle.dim():toggle()
 end, { desc = "Dimming" })
 
+map("n", "<leader>uc", function()
+	Snacks.toggle
+		.new({
+			name = "Copilot Suggestions",
+			get = function()
+				return vim.b.copilot_suggestion_auto_trigger == true
+			end,
+			set = function()
+				require("copilot.suggestion").toggle_auto_trigger()
+			end,
+		})
+		:toggle()
+end, { desc = "Copilot Suggestions" })
+
 map("n", "<leader>z", function()
 	Snacks.zen()
 end, { desc = "Toggle Zen Mode" })
