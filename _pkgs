@@ -33,6 +33,7 @@ gdb
 gimp
 git
 github-cli
+gnome-calculator
 gnome-keyring
 go
 gofumpt
@@ -75,16 +76,20 @@ noto-fonts-emoji
 ntfs-3g
 ntfsprogs
 obs-studio
+obsidian
+ollama
 openai-codex
 opencode
 openssh
 pacman-contrib
+pandoc-cli
 pavucontrol
 php
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+pnpm
 polkit-gnome
 power-profiles-daemon
 prettier
@@ -103,6 +108,7 @@ rclone
 ripgrep
 rofi
 rofi-emoji
+rsync
 ruff
 rust
 seahorse
@@ -118,6 +124,10 @@ syncplay
 tailscale
 task
 termdown
+texlive-binextra
+texlive-fontsrecommended
+texlive-latex
+texlive-latexrecommended
 tree
 tree-sitter-cli
 ttf-jetbrains-mono-nerd
@@ -126,6 +136,7 @@ typescript-language-server
 udisks2
 ufw
 unzip
+uv
 uwsm
 valgrind
 virt-manager
