@@ -1,0 +1,24 @@
+{
+    "tui.editor.cursorUp": [
+        "up",
+        "ctrl+p"
+    ],
+    "tui.editor.cursorDown": [
+        "down",
+        "ctrl+n"
+    ],
+    "tui.select.up": [
+        "up",
+        "ctrl+p"
+    ],
+    "tui.select.down": [
+        "down",
+        "ctrl+n"
+    ],
+    "app.interrupt": "ctrl+c",
+    "app.clear": "ctrl+u",
+    "tui.editor.deleteToLineStart": [],
+    "app.model.select": [],
+    "app.model.cycleForward": "ctrl+shift+n",
+    "app.model.cycleBackward": "ctrl+shift+b"
+}

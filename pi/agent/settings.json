@@ -1,0 +1,7 @@
+{
+  "lastChangelogVersion": "0.85.1",
+  "theme": "nordic",
+  "defaultProvider": "xai",
+  "defaultModel": "grok-4.6",
+  "defaultThinkingLevel": "high"
+}
