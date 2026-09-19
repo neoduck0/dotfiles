@@ -22,5 +22,7 @@
     "app.model.cycleForward": "ctrl+shift+n",
     "app.model.cycleBackward": "ctrl+shift+b",
     "tui.editor.deleteWordBackward": "ctrl+backspace",
-    "app.session.deleteNoninvasive": []
+    "app.session.deleteNoninvasive": [],
+    "app.session.togglePath": "ctrl+shift+p",
+    "app.session.toggleNamedFilter": "ctrl+shift+f"
 }
