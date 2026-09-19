@@ -13,7 +13,7 @@ new_workspace = "prefix+shift+c"
 [ui]
 prompt_new_tab_name = false
 tab_bar_position = "bottom"
-copy_on_select = false
+copy_on_select = true
 
 [ui.toast]
 delivery = "system"
