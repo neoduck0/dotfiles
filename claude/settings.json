@@ -29,5 +29,6 @@
     }
   },
   "theme": "dark-ansi",
-  "editorMode": "vim"
+  "editorMode": "vim",
+  "autoMemoryEnabled": false
 }
