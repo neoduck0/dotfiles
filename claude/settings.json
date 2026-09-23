@@ -26,9 +26,12 @@
   "modelSettings": {
     "claude-opus-5": {
       "effortLevel": "high"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "high"
     }
   },
+  "autoMemoryEnabled": false,
   "theme": "dark-ansi",
-  "editorMode": "vim",
-  "autoMemoryEnabled": false
+  "editorMode": "vim"
 }
