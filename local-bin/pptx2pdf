@@ -1,31 +1,40 @@
 #!/usr/bin/env python3
 
 import argparse
+import asyncio
+import os
 import shutil
-import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
 
-def convert_pptx_to_pdf(input_path: Path, output_dir: Path) -> bool:
+async def convert_pptx_to_pdf(input_path: Path, output_dir: Path) -> bool:
     output_path = output_dir / (input_path.stem + ".pdf")
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp_input = Path(tmpdir) / input_path.name
         shutil.copy2(input_path, tmp_input)
-        subprocess.run(
-            [
-                "soffice",
-                "--headless",
-                "--convert-to",
-                "pdf",
-                "--outdir",
-                tmpdir,
-                str(tmp_input),
-            ],
-            check=True,
-            capture_output=True,
+        # Concurrent soffice instances sharing the default profile collide on
+        # its lock and silently exit, so give each run its own profile.
+        profile = Path(tmpdir) / "profile"
+        proc = await asyncio.create_subprocess_exec(
+            "soffice",
+            f"-env:UserInstallation={profile.as_uri()}",
+            "--headless",
+            "--convert-to",
+            "pdf",
+            "--outdir",
+            tmpdir,
+            str(tmp_input),
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
         )
+        _, stderr = await proc.communicate()
+        if proc.returncode != 0:
+            raise RuntimeError(
+                f"soffice exited with status {proc.returncode}: "
+                f"{stderr.decode(errors='replace').strip()}"
+            )
         tmp_output = Path(tmpdir) / (input_path.stem + ".pdf")
         if tmp_output.exists():
             shutil.copy2(tmp_output, output_path)
@@ -33,15 +42,37 @@ def convert_pptx_to_pdf(input_path: Path, output_dir: Path) -> bool:
     return False
 
 
-def main():
+async def main():
     parser = argparse.ArgumentParser(description="Convert PPTX files to PDF")
     parser.add_argument("files", nargs="+", type=Path, help="PPTX file(s) to convert")
+    parser.add_argument(
+        "-j",
+        "--jobs",
+        type=int,
+        default=os.cpu_count() or 1,
+        help="max concurrent conversions (default: CPU count)",
+    )
     args = parser.parse_args()
 
     output_dir = Path.cwd()
     converted = []
     failed = []
+    sem = asyncio.Semaphore(max(1, args.jobs))
 
+    async def convert(file: Path):
+        async with sem:
+            print(f"Converting: {file.name} -> {file.stem}.pdf")
+            try:
+                if await convert_pptx_to_pdf(file, output_dir):
+                    converted.append(file.name)
+                    print(f"Done: {file.stem}.pdf")
+                else:
+                    failed.append((file.name, "conversion failed"))
+            except Exception as e:
+                print(f"Error converting {file.name}: {e}", file=sys.stderr)
+                failed.append((file.name, str(e)))
+
+    tasks = []
     for file in args.files:
         file = file.expanduser().resolve()
         if file.suffix.lower() != ".pptx":
@@ -51,15 +82,9 @@ def main():
             print(f"Skipping {file.name}: file not found", file=sys.stderr)
             failed.append((file.name, "file not found"))
             continue
-        print(f"Converting: {file.name} -> {file.stem}.pdf")
-        try:
-            if convert_pptx_to_pdf(file, output_dir):
-                converted.append(file.name)
-            else:
-                failed.append((file.name, "conversion failed"))
-        except Exception as e:
-            print(f"Error converting {file.name}: {e}", file=sys.stderr)
-            failed.append((file.name, str(e)))
+        tasks.append(convert(file))
+
+    await asyncio.gather(*tasks)
 
     print(f"\nConverted: {len(converted)}/{len(args.files)}")
     if failed:
@@ -67,4 +92,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
