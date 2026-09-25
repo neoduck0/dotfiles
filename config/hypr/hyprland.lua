@@ -215,9 +215,10 @@ hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }), { dont_inhibit
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }), { dont_inhibit = true })
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }), { dont_inhibit = true })
 
-for i = 1, 5 do
-	hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }), { dont_inhibit = true })
-	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }), { dont_inhibit = true })
+for i = 1, 10 do
+	local key = i % 10
+	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }), { dont_inhibit = true })
+	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }), { dont_inhibit = true })
 end
 
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = true })
