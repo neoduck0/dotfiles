@@ -92,8 +92,6 @@ hl.config({
 		blur = {
 			enabled = false,
 		},
-
-		dim_special = 0.8,
 	},
 
 	animations = {
@@ -222,9 +220,6 @@ for i = 1, 5 do
 	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }), { dont_inhibit = true })
 end
 
-hl.bind(mainMod .. " + 0", hl.dsp.workspace.toggle_special("magic"), { dont_inhibit = true })
-hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = "special:magic" }), { dont_inhibit = true })
-
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }), { dont_inhibit = true })
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }), { dont_inhibit = true })
 
@@ -320,8 +315,6 @@ hl.workspace_rule({ workspace = "2", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "3", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "4", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "5", monitor = "HDMI-A-1" })
-
-hl.workspace_rule({ workspace = "special:magic", gaps_in = 20, gaps_out = 40 })
 
 local pin_clients = {
 	"Picture-in-Picture",
