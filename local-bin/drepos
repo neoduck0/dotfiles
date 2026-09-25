@@ -39,7 +39,7 @@ def waybar():
     repos = repositories()
     count = len(repos)
     if count == 0:
-        return json.dumps({"text": " " + str(count)})
+        return json.dumps({"text": " " + str(count), "class": "clean"})
     return json.dumps(
         {
             "text": " " + str(count),
