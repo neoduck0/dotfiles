@@ -7,6 +7,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/drepos",
+        "custom/herdr",
         "custom/tasks",
         "wlr/taskbar",
         "mpris",
@@ -91,6 +92,12 @@
                 "tooltip": false
             }
         ]
+    },
+    "custom/herdr": {
+        "exec": "herdr status --json 2>/dev/null | jq -nc '(input? // {}) | (if .server.running then \"running\" else \"stopped\" end) as $s | {text: $s, class: $s, tooltip: \"herdr: \\($s)\"}'",
+        "interval": 5,
+        "return-type": "json",
+        "format": "󰳆"
     },
     "power-profiles-daemon": {
         "format": "{icon}",

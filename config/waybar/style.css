@@ -33,6 +33,10 @@ button {
   color: #b48ead;
 }
 
+#custom-herdr.stopped {
+  color: #4c566a;
+}
+
 #workspaces button.urgent label,
 #battery.critical,
 #wireplumber.muted,
@@ -44,6 +48,7 @@ button {
 
 #power-profiles-daemon.power-saver,
 #bluetooth.connected,
+#custom-herdr.running,
 #battery.charging,
 #battery.plugged {
   color: #a3be8c;
