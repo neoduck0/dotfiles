@@ -1,0 +1,23 @@
+[Added Associations]
+inode/directory=org.gnome.Nautilus.desktop;
+application/pdf=org.pwmt.zathura.desktop;
+image/png=swayimg.desktop;
+text/csv=dev.zed.Zed.desktop;
+image/jpeg=swayimg.desktop;
+image/webp=swayimg.desktop;
+application/x-partial-download=mpv.desktop;
+text/markdown=obsidian.desktop;dev.zed.Zed.desktop;
+text/html=firefox.desktop;
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+
+[Default Applications]
+inode/directory=org.gnome.Nautilus.desktop
+image/png=swayimg.desktop
+text/csv=dev.zed.Zed.desktop
+image/jpeg=swayimg.desktop
+image/webp=swayimg.desktop
+text/markdown=dev.zed.Zed.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
