@@ -9,6 +9,7 @@ breeze
 brightnessctl
 btrfs-progs
 caligula
+chromium
 clang
 cliphist
 cmake
@@ -27,6 +28,7 @@ exfatprogs
 fd
 ffmpeg
 firefox
+firefox-ublock-origin
 flatpak
 fzf
 gdb
@@ -44,6 +46,7 @@ grub
 gst-plugin-pipewire
 gvfs-mtp
 htop
+hunspell-en_us
 hypridle
 hyprland
 hyprlock
