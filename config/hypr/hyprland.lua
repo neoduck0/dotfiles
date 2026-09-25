@@ -21,7 +21,6 @@ hl.monitor({
 ---------------------
 
 local terminal = "kitty"
-local multiplexer = "herdr"
 local fileManager = "nautilus --new-window"
 local menu = "rofi -show-icons -show drun"
 local browser = "firefox"
@@ -159,8 +158,7 @@ local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + delete", hl.dsp.exec_cmd("hyprlock"), { dont_inhibit = true })
 
-hl.bind(mainMod .. " + return", hl.dsp.workspace.toggle_special("terminal"), { dont_inhibit = true })
-hl.bind(mainMod .. " + SHIFT + return", hl.dsp.exec_cmd(terminal), { dont_inhibit = true })
+hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal), { dont_inhibit = true })
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(fileManager), { dont_inhibit = true })
 hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd(browser), { dont_inhibit = true })
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ide), { dont_inhibit = true })
@@ -324,19 +322,6 @@ hl.workspace_rule({ workspace = "4", monitor = "eDP-1" })
 hl.workspace_rule({ workspace = "5", monitor = "HDMI-A-1" })
 
 hl.workspace_rule({ workspace = "special:magic", gaps_in = 20, gaps_out = 40 })
-hl.workspace_rule({
-	workspace = "special:terminal",
-	on_created_empty = terminal .. " " .. multiplexer,
-})
-
-hl.window_rule({
-	name = "fullscreen-terminal",
-	match = {
-		workspace = "special:terminal",
-		class = terminal,
-	},
-	fullscreen = true,
-})
 
 local pin_clients = {
 	"Picture-in-Picture",
