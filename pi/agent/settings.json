@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.87.1",
   "theme": "nordic",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-6-luna",
+  "defaultModel": "gpt-6-sol",
   "defaultThinkingLevel": "high",
   "quietStartup": true,
   "tuiMode": "regular"
