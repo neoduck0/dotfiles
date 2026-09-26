@@ -34,7 +34,8 @@ button {
 }
 
 #custom-drepos.clean,
-#custom-herdr.stopped {
+#custom-herdr.stopped,
+#custom-power {
   color: #4c566a;
 }
 
@@ -43,7 +44,8 @@ button {
 #wireplumber.muted,
 #bluetooth.on,
 #network.disconnected,
-#custom-drepos.dirty {
+#custom-drepos.dirty,
+#custom-power:hover {
   color: #bf616a;
 }
 

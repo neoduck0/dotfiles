@@ -28,7 +28,8 @@
         "battery",
         "wireplumber",
         "bluetooth",
-        "network"
+        "network",
+        "custom/power"
     ],
     "hyprland/workspaces": {
         "format": "{name}"
@@ -180,5 +181,18 @@
         "format-ethernet": "",
         "format-wifi": "{signalStrength}% ",
         "tooltip-format": "{essid}",
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": "Power menu",
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power-menu.xml",
+        "menu-actions": {
+            "lock": "hyprlock",
+            "suspend": "systemctl suspend",
+            "logout": "hyprctl dispatch exit",
+            "reboot": "systemctl reboot",
+            "shutdown": "systemctl poweroff"
+        }
     },
 }
