@@ -154,7 +154,8 @@ hl.gesture({
 
 local mainMod = "SUPER"
 
-hl.bind(mainMod .. " + delete", hl.dsp.exec_cmd("hyprlock"), { dont_inhibit = true })
+hl.bind(mainMod .. " + delete", hl.dsp.exec_cmd("systemctl suspend"), { dont_inhibit = true })
+hl.bind(mainMod .. " + SHIFT + delete", hl.dsp.exec_cmd("hyprlock"), { dont_inhibit = true })
 
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal), { dont_inhibit = true })
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(fileManager), { dont_inhibit = true })
