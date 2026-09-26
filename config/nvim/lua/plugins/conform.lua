@@ -14,9 +14,15 @@ return {
 			javascriptreact = { "prettier" },
 			json = { "jq" },
 			lua = { "stylua" },
+			markdown = { "prettier" },
 			python = { "ruff_format" },
 			typescript = { "prettier" },
 			typescriptreact = { "prettier" },
+		},
+		formatters = {
+			prettier = {
+				append_args = { "--prose-wrap", "always" },
+			},
 		},
 		format_on_save = {
 			timeout_ms = 500,
