@@ -5,6 +5,7 @@ name = "nord"
 [keys]
 prefix = "ctrl+a"
 detach = "prefix+d"
+goto = "prefix+t"
 split_horizontal = "prefix+s"
 settings = "prefix+shift+s"
 switch_workspace = "prefix+shift+1..9"
