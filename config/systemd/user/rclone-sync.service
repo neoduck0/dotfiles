@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync Cloud to mega-crypt
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rclone sync %h/Cloud mega-crypt: --log-file=/tmp/rclone-sync.log --log-level NOTICE

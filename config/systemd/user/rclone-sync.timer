@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Cloud sync hourly
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+Unit=rclone-sync.service
+
+[Install]
+WantedBy=timers.target
