@@ -84,7 +84,7 @@
       "manifest": {
         "id": "lua",
         "name": "Lua",
-        "version": "0.1.10",
+        "version": "0.1.11",
         "schema_version": 1,
         "description": "Lua support.",
         "repository": "https://github.com/zed-extensions/lua",
