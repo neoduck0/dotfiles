@@ -10,6 +10,7 @@ text/markdown=dev.zed.Zed.desktop;
 text/html=firefox.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
+video/webm=mpv.desktop;
 
 [Default Applications]
 inode/directory=org.gnome.Nautilus.desktop
@@ -21,3 +22,4 @@ text/markdown=dev.zed.Zed.desktop
 text/html=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
+video/webm=mpv.desktop
