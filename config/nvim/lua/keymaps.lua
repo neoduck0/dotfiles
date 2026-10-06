@@ -28,11 +28,11 @@ map("n", "<leader>ff", function()
 	Snacks.picker.files()
 end, { desc = "Find Files" })
 
-map("n", "<leader>gs", function()
+map("n", "<leader>sgs", function()
 	Snacks.picker.git_status()
 end, { desc = "Git Status" })
 
-map("n", "<leader>gd", function()
+map("n", "<leader>sgd", function()
 	Snacks.picker.git_diff()
 end, { desc = "Git Diff (Hunks)" })
 
@@ -173,3 +173,11 @@ end, { desc = "Previous Copilot Suggestion" })
 map("i", "<M-n>", function()
 	require("copilot.suggestion").next()
 end, { desc = "Next Copilot Suggestion" })
+
+map("n", "<leader>gd", function()
+	require("diffview").open()
+end, { desc = "Open Diffview" })
+
+map("n", "<leader>gc", function()
+	require("diffview").close()
+end, { desc = "Close Diffview" })
