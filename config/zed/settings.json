@@ -7,8 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "diff_view_style": "unified",
     "agent_servers": {
-        
+
     },
     "cli_default_open_behavior": "existing_window",
     "diagnostics": {
@@ -34,7 +35,9 @@
     "ui_font_family": "JetBrainsMono Nerd Font Mono",
     "buffer_font_family": "JetBrainsMono Nerd Font Mono",
     "agent": {
-        "sidebar_side": "right",
+        "threads_sidebar": {
+            "position": "right"
+        },
         "dock": "right",
         "default_profile": "write",
         "default_model": {
