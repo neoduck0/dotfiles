@@ -21,7 +21,7 @@ hl.monitor({
 ---------------------
 
 local terminal = "kitty"
-local fileManager = "nautilus --new-window"
+local fileManager = "thunar"
 local menu = "rofi -show-icons -show drun"
 local browser = "firefox"
 local ide = "zeditor"
