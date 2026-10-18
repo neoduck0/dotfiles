@@ -21,7 +21,10 @@ button {
   transition: none;
 }
 
-#workspaces button label {
+#workspaces button label,
+#custom-drepos.clean,
+#custom-herdr.stopped,
+#custom-power {
   color: #4c566a;
 }
 
@@ -29,14 +32,9 @@ button {
   color: #d8dee9;
 }
 
+#workspaces button.special.active label,
 #power-profiles-daemon.performance {
   color: #b48ead;
-}
-
-#custom-drepos.clean,
-#custom-herdr.stopped,
-#custom-power {
-  color: #4c566a;
 }
 
 #workspaces button.urgent label,

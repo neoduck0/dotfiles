@@ -32,7 +32,9 @@
         "custom/power"
     ],
     "hyprland/workspaces": {
-        "format": "{name}"
+        "format": "{name}",
+        "show-special": true,
+        "sort-by": "number"
     },
     "custom/tasks": {
         "exec": "task status:pending count",
