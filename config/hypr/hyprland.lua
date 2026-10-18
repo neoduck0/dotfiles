@@ -24,7 +24,6 @@ local terminal = "kitty"
 local fileManager = "thunar"
 local menu = "rofi -show-icons -show drun"
 local browser = "firefox"
-local ide = "zeditor"
 local clipboard = "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 local emojiPicker = "rofi -modi emoji -show emoji"
 
@@ -160,7 +159,6 @@ hl.bind(mainMod .. " + SHIFT + delete", hl.dsp.exec_cmd("hyprlock"), { dont_inhi
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal), { dont_inhibit = true })
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(fileManager), { dont_inhibit = true })
 hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd(browser), { dont_inhibit = true })
-hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(ide), { dont_inhibit = true })
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(menu), { dont_inhibit = true })
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboard), { dont_inhibit = true })
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(emojiPicker), { dont_inhibit = true })
