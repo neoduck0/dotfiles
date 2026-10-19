@@ -11,5 +11,10 @@
   "tuiMode": "regular",
   "compaction": {
     "enabled": false
-  }
+  },
+  "enabledModels": [
+    "openai/gpt-6-luna",
+    "openai/gpt-6.1-sol",
+    "openrouter/deepseek/deepseek-v4.1-flash-1017"
+  ]
 }
