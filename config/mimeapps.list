@@ -12,6 +12,7 @@ x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 video/webm=mpv.desktop;
 audio/flac=io.bassi.Amberol.desktop;
+image/svg+xml=swayimg.desktop;
 
 [Default Applications]
 inode/directory=org.gnome.Nautilus.desktop
