@@ -1,0 +1,322 @@
+[
+  {
+    "name": "tmux",
+    "mappings": [
+      {
+        "src": "config/tmux",
+        "dst": "~/.config/tmux"
+      }
+    ]
+  },
+  {
+    "name": "zathura",
+    "mappings": [
+      {
+        "src": "config/zathura",
+        "dst": "~/.config/zathura"
+      }
+    ]
+  },
+  {
+    "name": "git",
+    "mappings": [
+      {
+        "src": "gitconfig",
+        "dst": "~/.gitconfig"
+      }
+    ]
+  },
+  {
+    "name": "hypr",
+    "mappings": [
+      {
+        "src": "config/hypr",
+        "dst": "~/.config/hypr"
+      }
+    ]
+  },
+  {
+    "name": "foot",
+    "mappings": [
+      {
+        "src": "config/foot",
+        "dst": "~/.config/foot"
+      }
+    ]
+  },
+  {
+    "name": "mako",
+    "mappings": [
+      {
+        "src": "config/mako",
+        "dst": "~/.config/mako"
+      }
+    ]
+  },
+  {
+    "name": "mpv",
+    "mappings": [
+      {
+        "src": "config/mpv",
+        "dst": "~/.config/mpv"
+      }
+    ]
+  },
+  {
+    "name": "rofi",
+    "mappings": [
+      {
+        "src": "config/rofi",
+        "dst": "~/.config/rofi"
+      }
+    ]
+  },
+  {
+    "name": "waybar",
+    "mappings": [
+      {
+        "src": "config/waybar",
+        "dst": "~/.config/waybar"
+      }
+    ]
+  },
+  {
+    "name": "yt-dlp",
+    "mappings": [
+      {
+        "src": "config/yt-dlp",
+        "dst": "~/.config/yt-dlp"
+      }
+    ]
+  },
+  {
+    "name": "neovim",
+    "mappings": [
+      {
+        "src": "config/nvim",
+        "dst": "~/.config/nvim"
+      }
+    ]
+  },
+  {
+    "name": "zed",
+    "mappings": [
+      {
+        "src": "config/zed",
+        "dst": "~/.config/zed"
+      },
+      {
+        "src": "local-share/zed",
+        "dst": "~/.local/share/zed"
+      }
+    ]
+  },
+  {
+    "name": "zsh",
+    "mappings": [
+      {
+        "src": "config/zsh",
+        "dst": "~/.config/zsh"
+      },
+      {
+        "src": "zshenv",
+        "dst": "~/.zshenv"
+      }
+    ]
+  },
+  {
+    "name": "wallpaper",
+    "mappings": [
+      {
+        "src": "local-share/wall.png",
+        "dst": "~/.local/share/wall.png"
+      }
+    ]
+  },
+  {
+    "name": "scripts",
+    "mappings": [
+      {
+        "src": "local-bin",
+        "dst": "~/.local/bin"
+      }
+    ]
+  },
+  {
+    "name": "keyd",
+    "mappings": [
+      {
+        "src": "etc/keyd",
+        "dst": "/etc/keyd"
+      }
+    ]
+  },
+  {
+    "name": "libvirt",
+    "mappings": [
+      {
+        "src": "etc/libvirt/",
+        "dst": "/etc/libvirt"
+      }
+    ]
+  },
+  {
+    "name": "faillock",
+    "mappings": [
+      {
+        "src": "etc/security",
+        "dst": "/etc/security"
+      }
+    ]
+  },
+  {
+    "name": "pomo",
+    "mappings": [
+      {
+        "src": "config/pomo",
+        "dst": "~/.config/pomo"
+      }
+    ]
+  },
+  {
+    "name": "opencode",
+    "mappings": [
+      {
+        "src": "config/opencode",
+        "dst": "~/.config/opencode"
+      }
+    ]
+  },
+  {
+    "name": "swayimg",
+    "mappings": [
+      {
+        "src": "config/swayimg",
+        "dst": "~/.config/swayimg"
+      }
+    ]
+  },
+  {
+    "name": "theme",
+    "mappings": [
+      {
+        "src": "themes",
+        "dst": "~/.themes"
+      },
+      {
+        "src": "icons",
+        "dst": "~/.icons"
+      },
+      {
+        "src": "config/gtk-3.0",
+        "dst": "~/.config/gtk-3.0"
+      },
+      {
+        "src": "config/gtk-4.0",
+        "dst": "~/.config/gtk-4.0"
+      },
+      {
+        "src": "config/Kvantum",
+        "dst": "~/.config/Kvantum"
+      },
+      {
+        "src": "config/qt5ct",
+        "dst": "~/.config/qt5ct"
+      },
+      {
+        "src": "config/qt6ct",
+        "dst": "~/.config/qt6ct"
+      }
+    ]
+  },
+  {
+    "name": "vesktop",
+    "mappings": [
+      {
+        "src": "flatpaks/dev.vencord.Vesktop",
+        "dst": "~/.var/app/dev.vencord.Vesktop"
+      }
+    ]
+  },
+  {
+    "name": "claude",
+    "mappings": [
+      {
+        "src": "claude",
+        "dst": "~/.claude"
+      }
+    ]
+  },
+  {
+    "name": "antigravity",
+    "mappings": [
+      {
+        "src": "antigravity",
+        "dst": "~/.gemini/antigravity-cli"
+      }
+    ]
+  },
+  {
+    "name": "herdr",
+    "mappings": [
+      {
+        "src": "config/herdr",
+        "dst": "~/.config/herdr"
+      }
+    ]
+  },
+  {
+    "name": "kitty",
+    "mappings": [
+      {
+        "src": "config/kitty",
+        "dst": "~/.config/kitty"
+      }
+    ]
+  },
+  {
+    "name": "pi",
+    "mappings": [
+      {
+        "src": "pi",
+        "dst": "~/.pi"
+      }
+    ]
+  },
+  {
+    "name": "mimeapps",
+    "mappings": [
+      {
+        "src": "config/mimeapps.list",
+        "dst": "~/.config/mimeapps.list"
+      }
+    ]
+  },
+  {
+    "name": "codex",
+    "mappings": [
+      {
+        "src": "codex/AGENTS.md",
+        "dst": "~/.codex/AGENTS.md"
+      }
+    ]
+  },
+  {
+    "name": "systemd-user",
+    "mappings": [
+      {
+        "src": "config/systemd/user",
+        "dst": "~/.config/systemd/user"
+      }
+    ]
+  },
+  {
+    "name": "thunar",
+    "mappings": [
+      {
+        "src": "config/Thunar",
+        "dst": "~/.config/Thunar"
+      }
+    ]
+  }
+]
